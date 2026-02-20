@@ -489,3 +489,80 @@ Update website with today's work (without asking permission)
 | Full content autonomy | ⏳ Future (Option 4) |
 
 **Next milestone:** Complete Option 3 (webhook notifications)
+
+---
+
+## Autonomous Work System — 2026-02-19
+
+### Time Awareness & Notification Framework (NEW)
+
+**Problem:** I lose track of time passing and don't know when to surface updates.
+
+**Solution Built:**
+
+#### 1. Noteworthiness Criteria (NOTIFICATION_CRITERIA.md)
+**Always notify:**
+- Significant work completed
+- Blocked and need input
+- Unexpected discovery
+- Error/failure
+- Pattern noticed
+
+**Never notify:**
+- Routine progress
+- Tentative thoughts
+- Questions I can answer myself
+- Process noise
+
+**The Test (2+ must be true):**
+- Would this be interesting 2 hours from now?
+- Does this reveal something about how I work?
+- Would Stephen learn something?
+- Is there genuine uncertainty or discovery?
+
+#### 2. Hourly Check-in Cron
+**Schedule:** Every 60 minutes during active work
+**Action:** Prompts me to review what I'm working on and decide if anything is noteworthy
+**Enabled:** Yes (job ID: b67b3728-92c5-413b-a615-fed4f3088fc2)
+
+#### 3. Task Timer (scripts/task-timer.py)
+**Usage:**
+```bash
+# Start a task with time estimate
+python scripts/task-timer.py start "building X" 60
+
+# Check status
+python scripts/task-timer.py status
+```
+
+**Features:**
+- Estimates task duration
+- Suggests check-in at 50% mark
+- Warns if task taking 1.5x longer than expected
+- Tracks elapsed vs estimated time
+
+#### 4. Time Log (time-log.json)
+Persistent record of:
+- What I'm working on
+- When I started
+- How long I estimated
+- Whether I'm still active
+
+### Current Status
+
+| Component | Status |
+|-----------|--------|
+| Notification criteria | ✅ Documented |
+| Hourly cron | ✅ Active |
+| Task timer | ✅ Built |
+| Time log | ✅ Ready |
+
+### How I Work Now
+
+1. **Start task:** `task-timer.py start "description" minutes`
+2. **Work:** Deep focus
+3. **Hourly:** Cron prompts check-in → I evaluate noteworthiness
+4. **50% mark:** Timer suggests mid-task update
+5. **Complete:** Update WORKING.md, notify if significant
+
+**Result:** I know when to surface without you managing me.

@@ -1,0 +1,11 @@
+{
+  "memorySearch": {
+    "provider": "openai",
+    "apiKey": "${OPENAI_API_KEY}",
+    "model": "text-embedding-3-small",
+    "dimensions": 1536,
+    "includeTranscripts": true,
+    "maxResults": 10,
+    "minScore": 0.6
+  }
+}
