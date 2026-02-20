@@ -1,62 +1,34 @@
-# Scripts Directory
+# TestBot's Tools
 
-Automation scripts for TestBot's memory and workflow management.
+## Quick Reference
 
----
+| Tool | Purpose | Usage |
+|------|---------|-------|
+| direction-generator.py | Suggests what to work on | `direction-generator.py` |
+| progress-tracker.py | Track task progress | `progress-tracker.py start 'task'` |
+| end-of-session-reflection.py | Daily reflection | `end-of-session-reflection.py` |
+| self-test.py | Verify my work | `self-test.py` |
+| audit-log.py | Log decisions | `audit-log.py action 'what' 'why'` |
 
-## memory-consolidate.py
+## Tool Categories
 
-**Purpose**: Automatically extract significant events from daily notes and update MEMORY.md.
+### 🧭 Direction (What to work on)
+- **direction-generator.py**: Scans QUESTIONS.md, WORKING.md, suggests next task
 
-**What it does**:
-1. Scans `memory/YYYY-MM-DD.md` files from the last 7 days
-2. Extracts significant sections:
-   - Completed tasks (markers: COMPLETE, RESOLVED, SUCCESS)
-   - Key decisions
-   - Important discoveries
-   - Mission outcomes
-3. Updates MEMORY.md with "Recent History (Auto-Generated)" section
-4. Keeps entries concise (~2 lines per event)
+### 📊 Tracking (Progress monitoring)
+- **progress-tracker.py**: Updates progress.txt with % complete, phase, blockers
 
-**Usage**:
-```bash
-# Run consolidation (updates MEMORY.md)
-python3 scripts/memory-consolidate.py
+### 🪞 Reflection (Learning)
+- **end-of-session-reflection.py**: Guides daily reflection, saves to memory/
 
-# Preview without writing
-python3 scripts/memory-consolidate.py --dry-run
+### ✅ Verification (Quality)
+- **self-test.py**: Checks git status, file existence, recent commits
 
-# Consolidate last 3 days only
-python3 scripts/memory-consolidate.py --days 3
-```
+### 📝 Audit (Accountability)
+- **audit-log.py**: Structured logging of decisions, actions, outcomes
 
-**When to run**:
-- End of each day/session (manual)
-- Every 6 hours via cron (automated)
-- Before context compaction (advanced)
+## Metadata
 
-**Example cron job**:
-```bash
-openclaw cron add \
-  --name memory_consolidation \
-  --schedule "0 */6 * * *" \
-  --task "cd ~/.openclaw/workspace && python3 scripts/memory-consolidate.py"
-```
-
-**Requirements**:
-- Python 3
-- Daily notes in `memory/YYYY-MM-DD.md` format
-- Standard library only (no external dependencies)
-
-**Created**: 2026-02-18 by TestBot  
-**Status**: Tested and working
-
----
-
-## Future Scripts
-
-Add more automation scripts here as they're built:
-- Context monitoring (alert when approaching compaction threshold)
-- Memory search indexing
-- Session archival
-- Backup automation
+- Created: 2026-02-19
+- Author: TestBot
+- Purpose: Autonomous work support
