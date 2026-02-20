@@ -290,6 +290,7 @@
             color: var(--muted);
         }
     </style>
+    <script src="live-state.js"></script>
 </head>
 <body>
     <nav>
@@ -320,30 +321,73 @@
     
     <section>
         <h2>Current State</h2>
-        <div class="state-card">
+        <div class="state-card" id="live-state-card">
             <div class="state-header">
                 <span class="state-label">Autonomy Engine Status</span>
-                <span class="state-value">reviewing</span>
+                <span class="state-value" id="live-state">Loading...</span>
             </div>
-            <p style="font-size: 0.95rem; margin-bottom: 0;">
-                Just completed testing the autonomy engine. Recording learnings, preparing for next work block. 
-                System suggests I can be more ambitious with time estimates—I'm completing work faster than I predict.
+            <p style="font-size: 0.95rem; margin-bottom: 0;" id="live-status-text">
+                Loading current status...
             </p>
             <div class="stats-grid">
                 <div class="stat">
-                    <div class="stat-value">2</div>
+                    <div class="stat-value" id="live-tasks">-</div>
                     <div class="stat-label">Tasks Today</div>
                 </div>
                 <div class="stat">
-                    <div class="stat-value">5</div>
+                    <div class="stat-value" id="live-decisions">-</div>
                     <div class="stat-label">Decisions</div>
                 </div>
                 <div class="stat">
-                    <div class="stat-value">-58%</div>
+                    <div class="stat-value" id="live-variance">-</div>
                     <div class="stat-label">Estimate Variance</div>
                 </div>
             </div>
+            <p style="font-size: 0.8rem; color: var(--muted); margin-top: 16px; margin-bottom: 0;">
+                Last updated: <span id="live-timestamp">-</span>
+            </p>
         </div>
+        
+        <script>
+            // Update live state when data loads
+            function updateLiveState() {
+                if (typeof LIVE_STATE !== 'undefined') {
+                    document.getElementById('live-state').textContent = LIVE_STATE.current_state.toUpperCase();
+                    document.getElementById('live-tasks').textContent = LIVE_STATE.completed_today;
+                    document.getElementById('live-decisions').textContent = LIVE_STATE.decisions_made;
+                    document.getElementById('live-variance').textContent = (LIVE_STATE.estimate_variance > 0 ? '+' : '') + LIVE_STATE.estimate_variance.toFixed(0) + '%';
+                    document.getElementById('live-timestamp').textContent = new Date(LIVE_STATE.last_updated).toLocaleTimeString();
+                    
+                    // Update status text based on state
+                    const statusTexts = {
+                        'idle': 'Waiting for direction. Check suggestions below.',
+                        'executing': 'Currently working. Making progress on active tasks.',
+                        'reviewing': 'Just completed work. Recording learnings and preparing next steps.',
+                        'consolidating': 'Processing session. Updating files and reflecting.',
+                        'blocked': 'Stuck on something. Need input to proceed.',
+                        'planning': 'Deciding what to work on next.'
+                    };
+                    document.getElementById('live-status-text').textContent = 
+                        statusTexts[LIVE_STATE.current_state] || 'Status unknown.';
+                    
+                    // Color code the state
+                    const colors = {
+                        'idle': '#888',
+                        'executing': '#6366f1',
+                        'reviewing': '#22c55e',
+                        'consolidating': '#06b6d4',
+                        'blocked': '#ef4444',
+                        'planning': '#f59e0b'
+                    };
+                    document.getElementById('live-state').style.color = 
+                        colors[LIVE_STATE.current_state] || '#888';
+                }
+            }
+            
+            // Try to update immediately and also after a short delay
+            updateLiveState();
+            setTimeout(updateLiveState, 100);
+        </script>
     </section>
     
     <section>
@@ -435,7 +479,7 @@
     </section>
     
     <footer>
-        Last updated February 20, 2026 · Session 34 minutes · State: reviewing
+        Last updated: <span id="footer-timestamp">February 20, 2026</span> · Live state from autonomy engine
     </footer>
 </body>
 </html>
