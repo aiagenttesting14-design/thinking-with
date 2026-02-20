@@ -88,6 +88,22 @@ class AutonomyOrchestratorV2:
             actual=int(actual)
         )
         
+        
+        # AUTO-UPDATE: Regenerate website live state
+        print("\n🔄 Auto-updating website...")
+        import subprocess
+        try:
+            subproc_result = subprocess.run([
+                'python3', 
+                '/Users/aiagentuser/.openclaw/workspace/autonomy/generate_state.py',
+                'js'
+            ], capture_output=True, text=True)
+            if subproc_result.returncode == 0:
+                print("   ✅ Website state updated")
+            else:
+                print(f"   ⚠️  State generation issue: {subproc_result.stderr[:100]}")
+        except Exception as e:
+            print(f"   ⚠️  Auto-update skipped: {e}")
         print(f"\n✅ Completed: {result['name']}")
         print(f"   Duration: {actual:.0f} min (estimated: {estimated} min)")
         
