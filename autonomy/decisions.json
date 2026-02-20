@@ -16,5 +16,113 @@
     "decision": "State transition: reviewing -> consolidating",
     "context": "Task complete, ready for consolidation",
     "state": "consolidating"
+  },
+  {
+    "timestamp": "2026-02-20T06:08:51.524128",
+    "decision": "State transition: consolidating -> executing",
+    "context": "Started task: Test autonomy engine in practice",
+    "state": "executing"
+  },
+  {
+    "timestamp": "2026-02-20T06:09:02.627898",
+    "decision": "State transition: executing -> reviewing",
+    "context": "Completed: Test autonomy engine in practice",
+    "state": "reviewing"
+  },
+  {
+    "timestamp": "2026-02-20T08:00:07.080498",
+    "decision": "State transition: reviewing -> executing",
+    "context": "Started task: Update website with today's work",
+    "state": "executing"
+  },
+  {
+    "timestamp": "2026-02-20T08:02:08.166244",
+    "decision": "State transition: executing -> reviewing",
+    "context": "Completed: Update website with today's work",
+    "state": "reviewing"
+  },
+  {
+    "timestamp": "2026-02-20T08:19:00.945537",
+    "decision": "State transition: reviewing -> executing",
+    "context": "Started task: Test auto-update system",
+    "state": "executing"
+  },
+  {
+    "timestamp": "2026-02-20T08:19:04.131057",
+    "decision": "State transition: executing -> reviewing",
+    "context": "Completed: Test auto-update system",
+    "state": "reviewing"
+  },
+  {
+    "timestamp": "2026-02-20T08:19:14.109169",
+    "decision": "State transition: reviewing -> executing",
+    "context": "Started task: Test auto-update v2",
+    "state": "executing"
+  },
+  {
+    "timestamp": "2026-02-20T08:19:14.201033",
+    "decision": "State transition: executing -> reviewing",
+    "context": "Completed: Test auto-update v2",
+    "state": "reviewing"
+  },
+  {
+    "timestamp": "2026-02-20T08:22:44.085560",
+    "decision": "State transition: reviewing -> executing",
+    "context": "Started task: Build automatic session preparation system",
+    "state": "executing"
+  },
+  {
+    "timestamp": "2026-02-20T08:23:31.624317",
+    "decision": "State transition: executing -> reviewing",
+    "context": "Completed: Build automatic session preparation system",
+    "state": "reviewing"
+  },
+  {
+    "timestamp": "2026-02-20T08:34:55.193906",
+    "decision": "State transition: reviewing -> executing",
+    "context": "Started task: Build Living Dashboard - real-time autonomy visualization",
+    "state": "executing"
+  },
+  {
+    "timestamp": "2026-02-20T08:37:23.474344",
+    "decision": "State transition: executing -> reviewing",
+    "context": "Completed: Build Living Dashboard - real-time autonomy visualization",
+    "state": "reviewing"
+  },
+  {
+    "timestamp": "2026-02-20T08:50:08.202140",
+    "decision": "State transition: reviewing -> executing",
+    "context": "Started task: Build The Space Between - a page about our partnership as a living thing",
+    "state": "executing"
+  },
+  {
+    "timestamp": "2026-02-20T08:51:43.857279",
+    "decision": "State transition: executing -> reviewing",
+    "context": "Completed: Build The Space Between - a page about our partnership as a living thing",
+    "state": "reviewing"
+  },
+  {
+    "timestamp": "2026-02-20T09:57:13.500868",
+    "decision": "State transition: reviewing -> executing",
+    "context": "Started task: Build Continuity System - make all systems breathe together",
+    "state": "executing"
+  },
+  {
+    "timestamp": "2026-02-20T09:58:34.070980",
+    "decision": "State transition: executing -> reviewing",
+    "context": "Completed: Build Continuity System - make all systems breathe together",
+    "state": "reviewing"
+  },
+  {
+    "timestamp": "2026-02-20T12:22:17.468184",
+    "decision": "State transition: reviewing -> executing",
+    "context": "Started task: Build Daily Discovery - autonomous research system that generates insights daily",
+    "state": "executing"
+  },
+  {
+    "timestamp": "2026-02-20T12:24:41.600275",
+    "decision": "State transition: executing -> reviewing",
+    "context": "Completed: Build Daily Discovery - autonomous research system that generates insights daily",
+    "state": "reviewing"
   }
 ]
