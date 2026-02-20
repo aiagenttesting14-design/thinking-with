@@ -1,0 +1,98 @@
+#!/bin/zsh
+# Quick access to autonomy engine commands
+# Version 2.0 — Integrated with Goal System and Predictor
+
+WORKSPACE="/Users/aiagentuser/.openclaw/workspace"
+
+case "$1" in
+  start)
+    echo "🚀 Starting session with goal awareness..."
+    python3 "$WORKSPACE/autonomy/orchestrator_v2.py" start
+    ;;
+  work)
+    if [ -z "$2" ] || [ -z "$3" ]; then
+      echo "Usage: auto work 'task name' minutes"
+      exit 1
+    fi
+    # Get prediction first
+    echo "🔮 Predicting outcome..."
+    python3 "$WORKSPACE/autonomy/predictor.py" predict "$2" "$3"
+    echo ""
+    # Start the work
+    python3 "$WORKSPACE/autonomy/engine.py" start "$2" "$3"
+    ;;
+  status)
+    python3 "$WORKSPACE/autonomy/engine.py" status
+    ;;
+  done|complete)
+    python3 "$WORKSPACE/autonomy/orchestrator_v2.py" complete "$2"
+    ;;
+  end)
+    python3 "$WORKSPACE/autonomy/orchestrator_v2.py" end
+    ;;
+  block)
+    shift
+    python3 "$WORKSPACE/autonomy/engine.py" block "$@"
+    ;;
+  stats)
+    echo "📊 Engine Stats:"
+    python3 "$WORKSPACE/autonomy/engine.py" stats
+    echo ""
+    echo "🎯 Goal Stats:"
+    python3 "$WORKSPACE/autonomy/goals.py" stats
+    ;;
+  suggest|what|next)
+    python3 "$WORKSPACE/autonomy/goals.py" suggest
+    ;;
+  sync)
+    python3 "$WORKSPACE/autonomy/goals.py" sync
+    ;;
+  add)
+    if [ -z "$2" ]; then
+      echo "Usage: auto add 'backlog item' [priority]"
+      exit 1
+    fi
+    python3 "$WORKSPACE/autonomy/goals.py" add "$2" "$3"
+    ;;
+  advice)
+    python3 "$WORKSPACE/autonomy/goals.py" advice
+    ;;
+  predict)
+    if [ -z "$2" ] || [ -z "$3" ]; then
+      echo "Usage: auto predict 'task' minutes"
+      exit 1
+    fi
+    python3 "$WORKSPACE/autonomy/predictor.py" predict "$2" "$3"
+    ;;
+  insights)
+    python3 "$WORKSPACE/autonomy/predictor.py" insights
+    ;;
+  report)
+    python3 "$WORKSPACE/autonomy/predictor.py" report
+    ;;
+  help|*)
+    echo "Autonomy Engine v2 — Commands:"
+    echo ""
+    echo "SESSION MANAGEMENT:"
+    echo "  auto start              # Session start (with goal sync)"
+    echo "  auto end                # Session end (with consolidation)"
+    echo ""
+    echo "WORK MANAGEMENT:"
+    echo "  auto work 'task' N      # Start work (with prediction)"
+    echo "  auto done ['outcome']   # Complete work (with learning)"
+    echo "  auto status             # Current status"
+    echo "  auto block 'reason'     # Block current task"
+    echo ""
+    echo "GOAL SYSTEM:"
+    echo "  auto suggest            # Get idle suggestions"
+    echo "  auto sync               # Sync with WORKING.md"
+    echo "  auto add 'item' [prio]  # Add to backlog"
+    echo "  auto advice             # Get estimate advice"
+    echo ""
+    echo "PREDICTION & INSIGHTS:"
+    echo "  auto predict 'task' N   # Predict task outcome"
+    echo "  auto insights           # Productivity insights"
+    echo "  auto report             # Full insights report"
+    echo "  auto stats              # All statistics"
+    ;;
+esac

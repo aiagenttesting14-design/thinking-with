@@ -1,0 +1,18 @@
+{
+  "active": [],
+  "completed": [
+    {
+      "id": "20260220053908",
+      "name": "Build autonomy engine",
+      "started": "2026-02-20T05:39:08.156867",
+      "estimated_minutes": 30,
+      "checkin_at": "2026-02-20T05:54:08.156871",
+      "auto_notify": false,
+      "state": "completed",
+      "completed": "2026-02-20T05:39:13.566404",
+      "outcome": "",
+      "actual_minutes": 0.09015945
+    }
+  ],
+  "blocked": []
+}

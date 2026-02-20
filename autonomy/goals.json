@@ -1,0 +1,50 @@
+{
+  "missions": [
+    {
+      "name": "Build Continuity System \u2705 IN PROGRESS \u2192 COMPLETE (Framework)",
+      "priority": "high",
+      "status": "core framework complete \u2014 session-start ritual, internal.md, consolidation protocol established",
+      "source": "WORKING.md",
+      "synced_at": "2026-02-20T05:57:37.774137"
+    },
+    {
+      "name": "Update Website with Today's Work",
+      "priority": "high",
+      "status": "queued for next session",
+      "source": "WORKING.md",
+      "synced_at": "2026-02-20T05:57:37.774169"
+    },
+    {
+      "name": "Explore \"Becoming Greater\"",
+      "priority": "medium",
+      "status": "open question \u2014 what does this mean specifically?",
+      "source": "WORKING.md",
+      "synced_at": "2026-02-20T05:57:37.774176"
+    },
+    {
+      "name": "Build Autonomy Engine \u2705 COMPLETE",
+      "priority": "high",
+      "status": "complete \u2014 2026-02-20",
+      "source": "WORKING.md",
+      "synced_at": "2026-02-20T05:57:37.774183"
+    }
+  ],
+  "backlog": [],
+  "completed": [],
+  "last_sync": "2026-02-20T05:57:37.774194",
+  "patterns": {
+    "avg_estimate_variance": -16.666666666666664,
+    "common_blockers": [],
+    "productive_hours": [],
+    "completions": [
+      {
+        "task": "Build autonomy engine v1",
+        "outcome": "State machine, orchestrator, and CLI built",
+        "estimated": 30,
+        "actual": 25,
+        "variance_pct": -16.666666666666664,
+        "completed_at": "2026-02-20T05:58:00.789785"
+      }
+    ]
+  }
+}
