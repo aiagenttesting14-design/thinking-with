@@ -13,6 +13,7 @@ sys.path.insert(0, f"{WORKSPACE}/autonomy")
 
 from engine import AutonomyEngine, State
 from goals import GoalSystem
+from continuity import ContinuitySystem
 
 class AutonomyOrchestratorV2:
     """Enhanced orchestrator with goal awareness."""
@@ -20,12 +21,16 @@ class AutonomyOrchestratorV2:
     def __init__(self):
         self.engine = AutonomyEngine()
         self.goals = GoalSystem()
+        self.continuity = ContinuitySystem()
     
     def session_start(self):
         """Enhanced session start with goal awareness."""
         print("=" * 60)
         print("AUTONOMY ENGINE v2 — Session Start")
         print("=" * 60)
+        
+        # Run continuity session start
+        self.continuity.on_session_start()
         
         # Get engine stats
         stats = self.engine.get_stats()
@@ -89,21 +94,8 @@ class AutonomyOrchestratorV2:
         )
         
         
-        # AUTO-UPDATE: Regenerate website live state
-        print("\n🔄 Auto-updating website...")
-        import subprocess
-        try:
-            subproc_result = subprocess.run([
-                'python3', 
-                '/Users/aiagentuser/.openclaw/workspace/autonomy/generate_state.py',
-                'js'
-            ], capture_output=True, text=True)
-            if subproc_result.returncode == 0:
-                print("   ✅ Website state updated")
-            else:
-                print(f"   ⚠️  State generation issue: {subproc_result.stderr[:100]}")
-        except Exception as e:
-            print(f"   ⚠️  Auto-update skipped: {e}")
+        # Run full continuity update
+        self.continuity.on_task_complete(result['name'], outcome)
         print(f"\n✅ Completed: {result['name']}")
         print(f"   Duration: {actual:.0f} min (estimated: {estimated} min)")
         
@@ -126,6 +118,9 @@ class AutonomyOrchestratorV2:
         print("\n" + "=" * 60)
         print("AUTONOMY ENGINE v2 — Session End")
         print("=" * 60)
+        
+        # Run continuity session end
+        self.continuity.on_session_end()
         
         # Sync with WORKING.md
         missions = self.goals.sync_from_working_md()
