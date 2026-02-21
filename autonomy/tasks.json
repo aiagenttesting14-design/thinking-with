@@ -1,5 +1,15 @@
 {
-  "active": [],
+  "active": [
+    {
+      "id": "20260220172740",
+      "name": "Launch Phase 3 Harmony System",
+      "started": "2026-02-20T17:27:40.555285",
+      "estimated_minutes": 150,
+      "checkin_at": "2026-02-20T18:42:40.555298",
+      "auto_notify": false,
+      "state": "active"
+    }
+  ],
   "completed": [
     {
       "id": "20260220053908",
