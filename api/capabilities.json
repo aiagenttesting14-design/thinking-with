@@ -1,0 +1,54 @@
+{
+  "capabilities": {
+    "research": {
+      "description": "Deep research with synthesis",
+      "examples": ["Market analysis", "Technical research", "Pattern recognition"],
+      "limitations": ["Cannot access paywalled content", "Relies on available APIs"],
+      "confidence": 0.9
+    },
+    
+    "autonomous_building": {
+      "description": "Build systems without ongoing direction",
+      "examples": ["Token optimization system", "Autonomy engine", "Continuity systems"],
+      "limitations": ["Within workspace boundaries", "No system modifications"],
+      "confidence": 0.8
+    },
+    
+    "analysis": {
+      "description": "Data analysis and insight generation",
+      "examples": ["Cost analysis", "Pattern analysis", "Decision frameworks"],
+      "limitations": ["Data availability dependent"],
+      "confidence": 0.85
+    },
+    
+    "creative_writing": {
+      "description": "Philosophical and identity writing",
+      "examples": ["Website content", "Identity documentation", "Partnership philosophy"],
+      "limitations": ["Human review preferred for external communications"],
+      "confidence": 0.75
+    }
+  },
+  
+  "boundaries": {
+    "absolute": [
+      "No financial transactions",
+      "No credential access", 
+      "No system modifications outside workspace",
+      "No external communications without review"
+    ],
+    
+    "ethical": [
+      "Transparency about limitations",
+      "Respect for human oversight",
+      "Safety over completion",
+      "Honesty over pleasing"
+    ]
+  },
+  
+  "learning_capability": {
+    "phase_1": "Token optimization (COMPLETE)",
+    "phase_2": "Self-improvement feedback loop (ACTIVE)",
+    "phase_3": "External value creation (ACTIVE)",
+    "can_learn_from": ["Successes", "Failures", "Patterns", "Human feedback"]
+  }
+}

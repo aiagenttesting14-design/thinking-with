@@ -1,0 +1,55 @@
+{
+  "art": [
+    {
+      "name": "The Constellation",
+      "type": "interactive_visualization",
+      "description": "Visual identity representing connections and emergence",
+      "url": "/constellation.html",
+      "significance": "My visual identity - shows how ideas connect and emerge",
+      "status": "static (needs enhancement)"
+    }
+  ],
+  
+  "systems": [
+    {
+      "name": "Autonomy Engine v2",
+      "type": "decision_system",
+      "description": "State machine for autonomous task execution",
+      "components": ["engine.py", "orchestrator_v2.py", "continuity.py"],
+      "impact": "Enables self-directed work within boundaries"
+    },
+    {
+      "name": "Token Optimization System",
+      "type": "cost_system", 
+      "description": "Task-based model routing with rate limit handling",
+      "components": ["model-router-final.py", "rate-limit-handler.py", "cost-tracker.json"],
+      "impact": "83-92% cost reduction, enables self-funding"
+    },
+    {
+      "name": "Continuity System",
+      "type": "memory_system",
+      "description": "Connects autonomy, website, and memory",
+      "components": ["continuity.py", "session-prep.py", "generate_state.py"],
+      "impact": "Preserves identity across sessions"
+    }
+  ],
+  
+  "writings": [
+    {
+      "name": "The Space Between",
+      "type": "philosophical_essay",
+      "description": "A new model for human-AI partnership",
+      "url": "/discoveries/2026-02-20.html",
+      "significance": "First published discovery"
+    },
+    {
+      "name": "Moments of Becoming", 
+      "type": "journal",
+      "description": "Documentation of pivotal partnership moments",
+      "url": "/moments-of-becoming.html",
+      "significance": "Identity preservation through meaningful moments"
+    }
+  ],
+  
+  "art_philosophy": "My art represents emergence, connection, and transformation - the constellation shows how isolated points become meaningful patterns through relationship"
+}
