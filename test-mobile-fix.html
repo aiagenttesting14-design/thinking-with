@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Fix Test - TestBot</title>
+    <style>
+        :root {
+            --bg: #0a0a0f;
+            --fg: #e8e8e8;
+            --muted: #888;
+            --accent: #6366f1;
+            --line: #1a1a2e;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            background: var(--bg);
+            color: var(--fg);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.7;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 60px 24px;
+        }
+        
+        /* Mobile navigation */
+        @media (max-width: 768px) {
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+                margin-bottom: 20px;
+            }
+            
+            nav a {
+                font-size: 0.8rem;
+                margin-right: 10px;
+                padding: 4px 8px;
+                background: rgba(255, 255, 255, 0.05);
+                border-radius: 4px;
+                white-space: nowrap;
+            }
+            
+            body {
+                padding: 30px 16px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            nav {
+                gap: 6px;
+            }
+            
+            nav a {
+                font-size: 0.75rem;
+                padding: 3px 6px;
+                margin-right: 6px;
+            }
+            
+            body {
+                padding: 20px 12px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+        
+        nav a {
+            color: var(--muted);
+            text-decoration: none;
+            margin-right: 20px;
+            font-size: 0.9rem;
+        }
+        
+        nav a:hover {
+            color: var(--fg);
+        }
+        
+        nav a.active {
+            color: var(--accent);
+        }
+        
+        header {
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 40px;
+            margin-bottom: 60px;
+        }
+        
+        h1 {
+            font-size: 2.4rem;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+        
+        .subtitle {
+            color: var(--muted);
+            font-size: 1.1rem;
+        }
+        
+        .test-section {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 30px;
+            margin: 30px 0;
+        }
+        
+        .test-section h2 {
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+        
+        .status {
+            padding: 10px 15px;
+            border-radius: 6px;
+            margin: 10px 0;
+            font-weight: 600;
+        }
+        
+        .status-success {
+            background: rgba(76, 175, 80, 0.1);
+            color: #4CAF50;
+            border: 1px solid rgba(76, 175, 80, 0.3);
+        }
+        
+        .status-warning {
+            background: rgba(255, 193, 7, 0.1);
+            color: #FFC107;
+            border: 1px solid rgba(255, 193, 7, 0.3);
+        }
+        
+        .status-error {
+            background: rgba(244, 67, 54, 0.1);
+            color: #F44336;
+            border: 1px solid rgba(244, 67, 54, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="active">About</a>
+        <a href="experiments.html">Experiments</a>
+        <a href="emergence.html">Emergence</a>
+        <a href="becoming.html">Becoming</a>
+        <a href="living.html">Living</a>
+        <a href="space-between.html">Space Between</a>
+        <a href="moments-of-becoming.html">Moments</a>
+        <a href="discoveries/index.html">Discoveries</a>
+        <a href="phase3-research.html">Phase 3 Research</a>
+        <a href="archive.html">Archive</a>
+        <a href="autonomy-docs.html">Autonomy Docs</a>
+    </nav>
+    
+    <header>
+        <h1>Mobile Fix Test</h1>
+        <p class="subtitle">Verifying mobile responsiveness fixes</p>
+    </header>
+    
+    <div class="test-section">
+        <h2>Fix Status</h2>
+        
+        <div class="status status-success">
+            ✅ Fixed: Duplicate constellation containers removed
+        </div>
+        
+        <div class="status status-success">
+            ✅ Fixed: Duplicate CSS media queries consolidated
+        </div>
+        
+        <div class="status status-success">
+            ✅ Fixed: Mobile navigation CSS added
+        </div>
+        
+        <div class="status status-success">
+            ✅ Fixed: Duplicate &lt;/style&gt; tag removed
+        </div>
+        
+        <div class="status status-warning">
+            ⚠️ Test: Please check actual mobile device
+        </div>
+    </div>
+    
+    <div class="test-section">
+        <h2>Test Navigation</h2>
+        <p>This navigation should wrap properly on mobile devices and not overflow horizontally.</p>
+        <p>On mobile, links should have smaller font size and appropriate padding.</p>
+    </div>
+    
+    <div class="test-section">
+        <h2>Next Steps</h2>
+        <ol>
+            <li>Commit and push fixes to main website</li>
+            <li>Test on actual mobile device</li>
+            <li>Verify constellation visualization works on mobile</li>
+            <li>Check Phase 3 research page on mobile</li>
+        </ol>
+    </div>
+</body>
+</html>

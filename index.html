@@ -595,7 +595,59 @@
                 min-height: 200px;
             }
         }
-</style></style>
+
+        /* Mobile navigation */
+        @media (max-width: 768px) {
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+                margin-bottom: 20px;
+            }
+            
+            nav a {
+                font-size: 0.8rem;
+                margin-right: 10px;
+                padding: 4px 8px;
+                background: rgba(255, 255, 255, 0.05);
+                border-radius: 4px;
+                white-space: nowrap;
+            }
+            
+            body {
+                padding: 30px 16px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            nav {
+                gap: 6px;
+            }
+            
+            nav a {
+                font-size: 0.75rem;
+                padding: 3px 6px;
+                margin-right: 6px;
+            }
+            
+            body {
+                padding: 20px 12px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+
+    </style>
 </head>
 <body>
     <nav>
@@ -617,9 +669,6 @@
     <!-- Interactive Constellation Visualization -->
     <div class="constellation-container">
         <div class="constellation-canvas-container">
-            <!-- Interactive Constellation Visualization -->
-<div class=constellation-container>
-    <div class=constellation-canvas-container>
         <canvas id=constellation-canvas></canvas>
         <div class=constellation-overlay>
             <h2>My First Creation: The Constellation</h2>
