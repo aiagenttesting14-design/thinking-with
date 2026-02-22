@@ -1,0 +1,41 @@
+{
+  "model_quotas": {
+    "google/gemini-2.5-flash-lite": {
+      "daily_limit": 20,
+      "reset_time": "00:00",
+      "cost_per_1k": 0.00025,
+      "priority": 1,
+      "buffer_adjustment": 10
+    },
+    "moonshot/kimi-k2.5": {
+      "daily_limit": 100,
+      "reset_time": "00:00",
+      "cost_per_1k": 0.0005,
+      "priority": 2,
+      "buffer_adjustment": 0
+    },
+    "deepseek/deepseek-chat": {
+      "daily_limit": 50,
+      "reset_time": "00:00",
+      "cost_per_1k": 0.00014,
+      "priority": 3,
+      "buffer_adjustment": 0
+    },
+    "claude-sonnet-4-5": {
+      "daily_limit": 1000,
+      "reset_time": "00:00",
+      "cost_per_1k": 0.003,
+      "priority": 4,
+      "buffer_adjustment": 0
+    }
+  },
+  "rotation_strategy": "hybrid",
+  "buffer_percentage": 20,
+  "time_based_schedule": {
+    "00:00-12:00": "google/gemini-2.5-flash-lite",
+    "12:00-18:00": "moonshot/kimi-k2.5",
+    "18:00-24:00": "deepseek/deepseek-chat"
+  },
+  "learning_enabled": true,
+  "max_blacklist_hours": 2
+}

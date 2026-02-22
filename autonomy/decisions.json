@@ -130,5 +130,59 @@
     "decision": "State transition: reviewing -> executing",
     "context": "Started task: Launch Phase 3 Harmony System",
     "state": "executing"
+  },
+  {
+    "timestamp": "2026-02-21T04:45:46.088219",
+    "decision": "Notify decision: True (score 4/4)",
+    "context": "Type: progress_update, Context: {'interesting_later': True, 'reveals_work': True, 'teaches_stephen': True, 'has_uncertainty': True}",
+    "state": "executing"
+  },
+  {
+    "timestamp": "2026-02-21T05:45:40.063105",
+    "decision": "Notify decision: True (score 4/4)",
+    "context": "Type: progress_update, Context: {'interesting_later': True, 'reveals_work': True, 'teaches_stephen': True, 'has_uncertainty': True}",
+    "state": "executing"
+  },
+  {
+    "timestamp": "2026-02-21T06:45:39.765349",
+    "decision": "Notify decision: True (score 4/4)",
+    "context": "Type: progress_update, Context: {'interesting_later': True, 'reveals_work': True, 'teaches_stephen': True, 'has_uncertainty': True}",
+    "state": "executing"
+  },
+  {
+    "timestamp": "2026-02-21T07:45:40.667615",
+    "decision": "Notify decision: True (score 4/4)",
+    "context": "Type: progress_update, Context: {'interesting_later': True, 'reveals_work': True, 'teaches_stephen': True, 'has_uncertainty': True}",
+    "state": "executing"
+  },
+  {
+    "timestamp": "2026-02-21T08:34:53.508595",
+    "decision": "Notify decision: True (score 4/4)",
+    "context": "Type: progress_update, Context: {'interesting_later': True, 'reveals_work': True, 'teaches_stephen': True, 'has_uncertainty': True}",
+    "state": "executing"
+  },
+  {
+    "timestamp": "2026-02-21T08:42:23.513068",
+    "decision": "State transition: executing -> reviewing",
+    "context": "Completed: Launch Phase 3 Harmony System",
+    "state": "reviewing"
+  },
+  {
+    "timestamp": "2026-02-21T08:42:23.514284",
+    "decision": "State transition: reviewing -> consolidating",
+    "context": "Task complete, ready for consolidation",
+    "state": "consolidating"
+  },
+  {
+    "timestamp": "2026-02-22T11:52:21.674468",
+    "decision": "State transition: idle -> executing",
+    "context": "Started task: Execute Phase 3 Week 1 market research tasks",
+    "state": "executing"
+  },
+  {
+    "timestamp": "2026-02-22T12:19:10.508400",
+    "decision": "State transition: executing -> reviewing",
+    "context": "Completed: Execute Phase 3 Week 1 market research tasks",
+    "state": "reviewing"
   }
 ]

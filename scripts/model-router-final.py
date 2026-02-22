@@ -1,70 +1,66 @@
 #!/usr/bin/env python3
 """
-Model Router Final - Better word boundary detection
+Model Router with Intelligent Rotation Integration
+Maintains backward compatibility while using new rotation system
 """
 
 import sys
-import re
+import os
 
-def get_model_for_task(task_description):
-    """Return the best model for a given task with better matching"""
-    task = task_description.lower()
-    words = set(re.findall(r'\b\w+\b', task))  # Get individual words
+# Add current directory to path
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
+# Try to use enhanced router
+try:
+    # Import using importlib for hyphenated module name
+    import importlib.util
     
-    # Task type detection with word boundaries
-    research_words = {"research", "search", "investigate", "scan"}
-    summary_words = {"summarize", "brief", "quick", "short", "extract", "recap", "overview"}
-    synthesis_words = {"synthesize", "analyze", "reason", "complex", "deep", "evaluate", "critique"}
-    creative_words = {"write", "creative", "essay", "story", "article", "poem", "narrative"}
-    code_words = {"code", "program", "script", "function", "python", "javascript", "html"}
-    verify_words = {"verify", "test", "check", "audit", "review", "validate"}
-    heartbeat_words = {"heartbeat", "monitor", "status", "health", "periodic"}
+    spec = importlib.util.spec_from_file_location(
+        "model_router_enhanced", 
+        os.path.join(os.path.dirname(__file__), "model-router-enhanced.py")
+    )
+    model_router_enhanced = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(model_router_enhanced)
     
-    # Check for exact word matches
-    if words & summary_words:
-        return "google/gemini-2.5-flash-lite"  # Cheapest
+    from model_router_enhanced import EnhancedModelRouter
     
-    elif words & research_words:
-        return "moonshot/kimi-k2.5"  # Fast, cheap, good for parallel
+    def get_model_for_task(task_description):
+        """Wrapper for compatibility"""
+        router = EnhancedModelRouter()
+        return router.get_model_for_task(task_description)
     
-    elif words & synthesis_words:
-        return "claude-sonnet-4-5"  # Best at reasoning
+    print("🤖 Using enhanced router with intelligent rotation", file=sys.stderr)
     
-    elif words & creative_words:
-        return "moonshot/kimi-k2.5"  # Creative and fast
+except ImportError as e:
+    # Fallback to original logic
+    import re
     
-    elif words & code_words:
-        return "moonshot/kimi-k2.5"  # Good at code
-    
-    elif words & verify_words:
-        return "moonshot/kimi-k2.5"  # Fast verification
-    
-    elif words & heartbeat_words:
-        return "google/gemini-2.5-flash-lite"  # Cheapest for routine
-    
-    else:
-        # Fallback: check for substrings (less precise)
-        task_lower = task_description.lower()
-        if any(word in task_lower for word in ["summar", "brief", "quick"]):
+    def get_model_for_task(task_description):
+        """Original fallback logic"""
+        task = task_description.lower()
+        
+        if any(word in task for word in ["summar", "brief", "quick", "heartbeat", "monitor"]):
             return "google/gemini-2.5-flash-lite"
-        elif any(word in task_lower for word in ["research", "search", "find "]):  # Space after find
+        elif any(word in task for word in ["research", "search", "investigate", "parallel"]):
+            return "moonshot/kimi-k2.5"
+        elif any(word in task for word in ["complex", "reason", "analyze", "synthesize"]):
+            return "claude-sonnet-4-5"
+        elif any(word in task for word in ["code", "program", "script"]):
             return "moonshot/kimi-k2.5"
         else:
-            return "moonshot/kimi-k2.5"  # Default
+            return "moonshot/kimi-k2.5"
+    
+    print(f"⚠️ Using basic router: {e}", file=sys.stderr)
 
 def main():
     if len(sys.argv) < 2:
         print("Usage: python3 model-router-final.py '<task description>'")
-        print("\nExamples:")
-        print("  python3 model-router-final.py 'Research AI memory systems'")
-        print("  python3 model-router-final.py 'Summarize the Reddit findings'")
-        print("  python3 model-router-final.py 'Analyze complex reasoning patterns'")
         sys.exit(1)
     
     task = " ".join(sys.argv[1:])
     model = get_model_for_task(task)
     
-    # Cost comparison
+    # Cost info for display
     cost_per_1k = {
         "moonshot/kimi-k2.5": 0.0005,
         "google/gemini-2.5-flash-lite": 0.00025,
@@ -82,8 +78,7 @@ def main():
             claude_cost = cost_per_1k["claude-sonnet-4-5"]
             savings_pct = ((claude_cost - cost) / claude_cost) * 100
             
-            # Show actual dollar savings for typical task
-            tokens_estimate = 2000  # Typical task size
+            tokens_estimate = 2000
             task_cost = cost * (tokens_estimate / 1000)
             claude_task_cost = claude_cost * (tokens_estimate / 1000)
             savings = claude_task_cost - task_cost
@@ -93,8 +88,7 @@ def main():
             print(f"Claude cost (2K tokens): ${claude_task_cost:.4f}")
             print(f"Savings: ${savings:.4f} ({savings_pct:.0f}% cheaper)")
             
-            # Monthly projection
-            daily_tasks = 5  # Average tasks per day
+            daily_tasks = 5
             monthly_savings = savings * daily_tasks * 30
             print(f"Monthly savings projection: ${monthly_savings:.2f}")
             break

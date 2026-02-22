@@ -33,6 +33,49 @@
       "model": "moonshot/kimi-k2.5",
       "status": "attempted",
       "timestamp": "2026-02-20T16:35:28.980934"
+    },
+    {
+      "task": "Test intelligent rotation system",
+      "model": "moonshot/kimi-k2.5",
+      "label": "Rotation-Test",
+      "status": "failed",
+      "timestamp": "2026-02-21T08:03:33.416868",
+      "error": "env: node: No such file or directory\n"
+    },
+    {
+      "task": "Summarize research paper",
+      "model": "google/gemini-2.5-flash-lite",
+      "label": "Summary-Test",
+      "status": "simulated_success",
+      "timestamp": "2026-02-21T08:05:11.072474"
+    },
+    {
+      "task": "Research AI memory systems",
+      "model": "moonshot/kimi-k2.5",
+      "label": "Research-Test",
+      "status": "simulated_success",
+      "timestamp": "2026-02-21T08:05:11.076713"
+    },
+    {
+      "task": "Complex reasoning analysis",
+      "model": "claude-sonnet-4-5",
+      "label": "Reasoning-Test",
+      "status": "simulated_success",
+      "timestamp": "2026-02-21T08:05:11.081432"
+    },
+    {
+      "task": "Heartbeat check",
+      "model": "google/gemini-2.5-flash-lite",
+      "label": "Heartbeat-Test",
+      "status": "simulated_success",
+      "timestamp": "2026-02-21T08:05:11.088398"
+    },
+    {
+      "task": "Test after rate limit",
+      "model": "moonshot/kimi-k2.5",
+      "label": "RateLimit-Test",
+      "status": "simulated_success",
+      "timestamp": "2026-02-21T08:05:11.095553"
     }
   ],
   "total_estimated_cost": 0,
@@ -54,9 +97,855 @@
       "error": "API rate limit reached. Please try again later.",
       "timestamp": "2026-02-20T16:19:38.328649",
       "action": "added_to_blacklist"
+    },
+    {
+      "model": "google/gemini-2.5-flash-lite",
+      "error": "Simulated API rate limit reached",
+      "timestamp": "2026-02-21T08:05:11.091591",
+      "action": "added_to_blacklist"
     }
   ],
-  "model_blacklist": {
-    "google/gemini-2.5-flash-lite": "2026-02-20T17:19:38.328676"
-  }
+  "model_blacklist": {},
+  "daily_usage": {
+    "2026-02-21": {
+      "google/gemini-2.5-flash-lite": 16,
+      "moonshot/kimi-k2.5": 80,
+      "claude-sonnet-4-5": 23
+    }
+  },
+  "rotation_log": [
+    {
+      "timestamp": "2026-02-21T08:01:27.119195",
+      "model": "google/gemini-2.5-flash-lite",
+      "task_type": "Summarize today's work",
+      "daily_count": 1,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T08:01:27.119909",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Research AI memory systems",
+      "daily_count": 1,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T08:01:27.120579",
+      "model": "claude-sonnet-4-5",
+      "task_type": "Complex reasoning analysis",
+      "daily_count": 1,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T08:01:27.121804",
+      "model": "google/gemini-2.5-flash-lite",
+      "task_type": "Heartbeat check",
+      "daily_count": 2,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T08:01:27.123858",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Write creative story",
+      "daily_count": 2,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T08:02:47.583779",
+      "model": "google/gemini-2.5-flash-lite",
+      "task_type": "Summarize today's research findings",
+      "daily_count": 3,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T08:02:51.623582",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Research AI memory systems on Reddit",
+      "daily_count": 3,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T08:02:55.544568",
+      "model": "google/gemini-2.5-flash-lite",
+      "task_type": "Summarize today's work",
+      "daily_count": 4,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T08:02:55.545922",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Research AI memory systems",
+      "daily_count": 4,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T08:02:55.547021",
+      "model": "claude-sonnet-4-5",
+      "task_type": "Complex reasoning analysis",
+      "daily_count": 2,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T08:02:55.548310",
+      "model": "google/gemini-2.5-flash-lite",
+      "task_type": "Heartbeat check",
+      "daily_count": 5,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T08:02:55.549537",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Write creative story",
+      "daily_count": 5,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T08:03:33.402426",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Test intelligent rotation system",
+      "daily_count": 6,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T08:05:11.068278",
+      "model": "google/gemini-2.5-flash-lite",
+      "task_type": "Summarize research paper",
+      "daily_count": 6,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T08:05:11.074937",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Research AI memory systems",
+      "daily_count": 7,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T08:05:11.078828",
+      "model": "claude-sonnet-4-5",
+      "task_type": "Complex reasoning analysis",
+      "daily_count": 3,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T08:05:11.085579",
+      "model": "google/gemini-2.5-flash-lite",
+      "task_type": "Heartbeat check",
+      "daily_count": 7,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T08:08:16.670998",
+      "model": "google/gemini-2.5-flash-lite",
+      "task_type": "Test summary task",
+      "daily_count": 8,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T08:42:04.537009",
+      "model": "google/gemini-2.5-flash-lite",
+      "task_type": "Summarize today's work",
+      "daily_count": 9,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T08:42:04.538240",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Research AI memory systems",
+      "daily_count": 8,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T08:42:04.539474",
+      "model": "claude-sonnet-4-5",
+      "task_type": "Complex reasoning analysis",
+      "daily_count": 4,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T08:42:04.540677",
+      "model": "google/gemini-2.5-flash-lite",
+      "task_type": "Heartbeat check",
+      "daily_count": 10,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T08:42:04.541850",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Write creative story",
+      "daily_count": 9,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T10:27:44.790314",
+      "model": "google/gemini-2.5-flash-lite",
+      "task_type": "Summarize today's work",
+      "daily_count": 11,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T10:27:44.791867",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Research AI memory systems",
+      "daily_count": 10,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T10:27:44.793315",
+      "model": "claude-sonnet-4-5",
+      "task_type": "Complex reasoning analysis",
+      "daily_count": 5,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T10:27:44.795235",
+      "model": "google/gemini-2.5-flash-lite",
+      "task_type": "Heartbeat check",
+      "daily_count": 12,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T10:27:44.797265",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Write creative story",
+      "daily_count": 11,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T11:19:14.050192",
+      "model": "google/gemini-2.5-flash-lite",
+      "task_type": "Summarize today's work",
+      "daily_count": 13,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T11:19:14.051731",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Research AI memory systems",
+      "daily_count": 12,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T11:19:14.052993",
+      "model": "claude-sonnet-4-5",
+      "task_type": "Complex reasoning analysis",
+      "daily_count": 6,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T11:19:14.054124",
+      "model": "google/gemini-2.5-flash-lite",
+      "task_type": "Heartbeat check",
+      "daily_count": 14,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T11:19:14.055229",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Write creative story",
+      "daily_count": 13,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T11:49:19.771635",
+      "model": "google/gemini-2.5-flash-lite",
+      "task_type": "Summarize today's work",
+      "daily_count": 15,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T11:49:19.773428",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Research AI memory systems",
+      "daily_count": 14,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T11:49:19.774972",
+      "model": "claude-sonnet-4-5",
+      "task_type": "Complex reasoning analysis",
+      "daily_count": 7,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T11:49:19.776252",
+      "model": "google/gemini-2.5-flash-lite",
+      "task_type": "Heartbeat check",
+      "daily_count": 16,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T11:49:19.777652",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Write creative story",
+      "daily_count": 15,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T12:10:22.038614",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Summarize today's work",
+      "daily_count": 16,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T12:10:22.040512",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Research AI memory systems",
+      "daily_count": 17,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T12:10:22.042095",
+      "model": "claude-sonnet-4-5",
+      "task_type": "Complex reasoning analysis",
+      "daily_count": 8,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T12:10:22.043595",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Heartbeat check",
+      "daily_count": 18,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T12:10:22.044834",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Write creative story",
+      "daily_count": 19,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T14:59:41.673819",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Summarize today's work",
+      "daily_count": 20,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T14:59:41.676910",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Research AI memory systems",
+      "daily_count": 21,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T14:59:41.678458",
+      "model": "claude-sonnet-4-5",
+      "task_type": "Complex reasoning analysis",
+      "daily_count": 9,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T14:59:41.679986",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Heartbeat check",
+      "daily_count": 22,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T14:59:41.681417",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Write creative story",
+      "daily_count": 23,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T15:06:35.400727",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Summarize today's work",
+      "daily_count": 24,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T15:06:35.402325",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Research AI memory systems",
+      "daily_count": 25,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T15:06:35.403686",
+      "model": "claude-sonnet-4-5",
+      "task_type": "Complex reasoning analysis",
+      "daily_count": 10,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T15:06:35.405129",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Heartbeat check",
+      "daily_count": 26,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T15:06:35.406467",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Write creative story",
+      "daily_count": 27,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T15:19:22.922218",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Summarize today's work",
+      "daily_count": 28,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T15:19:22.924158",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Research AI memory systems",
+      "daily_count": 29,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T15:19:22.926075",
+      "model": "claude-sonnet-4-5",
+      "task_type": "Complex reasoning analysis",
+      "daily_count": 11,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T15:19:22.928109",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Heartbeat check",
+      "daily_count": 30,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T15:19:22.930092",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Write creative story",
+      "daily_count": 31,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T15:45:59.812968",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Summarize today's work",
+      "daily_count": 32,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T15:45:59.815342",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Research AI memory systems",
+      "daily_count": 33,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T15:45:59.816969",
+      "model": "claude-sonnet-4-5",
+      "task_type": "Complex reasoning analysis",
+      "daily_count": 12,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T15:45:59.818802",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Heartbeat check",
+      "daily_count": 34,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T15:45:59.820696",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Write creative story",
+      "daily_count": 35,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T15:46:02.785062",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Summarize today's work",
+      "daily_count": 36,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T15:46:02.787750",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Research AI memory systems",
+      "daily_count": 37,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T15:46:02.789452",
+      "model": "claude-sonnet-4-5",
+      "task_type": "Complex reasoning analysis",
+      "daily_count": 13,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T15:46:02.791221",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Heartbeat check",
+      "daily_count": 38,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T15:46:02.792681",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Write creative story",
+      "daily_count": 39,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T16:19:11.855985",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Summarize today's work",
+      "daily_count": 40,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T16:19:11.859060",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Research AI memory systems",
+      "daily_count": 41,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T16:19:11.861010",
+      "model": "claude-sonnet-4-5",
+      "task_type": "Complex reasoning analysis",
+      "daily_count": 14,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T16:19:11.862835",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Heartbeat check",
+      "daily_count": 42,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T16:19:11.864316",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Write creative story",
+      "daily_count": 43,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T16:49:13.553263",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Summarize today's work",
+      "daily_count": 44,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T16:49:13.555482",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Research AI memory systems",
+      "daily_count": 45,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T16:49:13.557075",
+      "model": "claude-sonnet-4-5",
+      "task_type": "Complex reasoning analysis",
+      "daily_count": 15,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T16:49:13.559557",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Heartbeat check",
+      "daily_count": 46,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T16:49:13.561183",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Write creative story",
+      "daily_count": 47,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T16:49:16.504219",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Summarize today's work",
+      "daily_count": 48,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T16:49:16.506141",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Research AI memory systems",
+      "daily_count": 49,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T16:49:16.507946",
+      "model": "claude-sonnet-4-5",
+      "task_type": "Complex reasoning analysis",
+      "daily_count": 16,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T16:49:16.509860",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Heartbeat check",
+      "daily_count": 50,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T16:49:16.511532",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Write creative story",
+      "daily_count": 51,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T17:19:08.074446",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Summarize today's work",
+      "daily_count": 52,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T17:19:08.076489",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Research AI memory systems",
+      "daily_count": 53,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T17:19:08.078379",
+      "model": "claude-sonnet-4-5",
+      "task_type": "Complex reasoning analysis",
+      "daily_count": 17,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T17:19:08.080314",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Heartbeat check",
+      "daily_count": 54,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T17:19:08.082018",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Write creative story",
+      "daily_count": 55,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T17:49:08.652918",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Summarize today's work",
+      "daily_count": 56,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T17:49:08.655438",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Research AI memory systems",
+      "daily_count": 57,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T17:49:08.657851",
+      "model": "claude-sonnet-4-5",
+      "task_type": "Complex reasoning analysis",
+      "daily_count": 18,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T17:49:08.660589",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Heartbeat check",
+      "daily_count": 58,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T17:49:08.662949",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Write creative story",
+      "daily_count": 59,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T18:19:16.670400",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Summarize today's work",
+      "daily_count": 60,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T18:19:16.673553",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Research AI memory systems",
+      "daily_count": 61,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T18:19:16.675503",
+      "model": "claude-sonnet-4-5",
+      "task_type": "Complex reasoning analysis",
+      "daily_count": 19,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T18:19:16.677224",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Heartbeat check",
+      "daily_count": 62,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T18:19:16.678865",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Write creative story",
+      "daily_count": 63,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T18:49:08.278468",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Summarize today's work",
+      "daily_count": 64,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T18:49:08.281042",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Research AI memory systems",
+      "daily_count": 65,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T18:49:08.282867",
+      "model": "claude-sonnet-4-5",
+      "task_type": "Complex reasoning analysis",
+      "daily_count": 20,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T18:49:08.284811",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Heartbeat check",
+      "daily_count": 66,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T18:49:08.286787",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Write creative story",
+      "daily_count": 67,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T19:19:21.819206",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Summarize today's work",
+      "daily_count": 68,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T19:19:21.821674",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Research AI memory systems",
+      "daily_count": 69,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T19:19:21.824658",
+      "model": "claude-sonnet-4-5",
+      "task_type": "Complex reasoning analysis",
+      "daily_count": 21,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T19:19:21.826861",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Heartbeat check",
+      "daily_count": 70,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T19:19:21.828718",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Write creative story",
+      "daily_count": 71,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T19:46:11.423286",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Summarize today's work",
+      "daily_count": 72,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T19:46:11.426543",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Research AI memory systems",
+      "daily_count": 73,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T19:46:11.428809",
+      "model": "claude-sonnet-4-5",
+      "task_type": "Complex reasoning analysis",
+      "daily_count": 22,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T19:46:11.431199",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Heartbeat check",
+      "daily_count": 74,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T19:46:11.433502",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Write creative story",
+      "daily_count": 75,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T19:49:11.427902",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Summarize today's work",
+      "daily_count": 76,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T19:49:11.430525",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Research AI memory systems",
+      "daily_count": 77,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T19:49:11.432519",
+      "model": "claude-sonnet-4-5",
+      "task_type": "Complex reasoning analysis",
+      "daily_count": 23,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T19:49:11.434571",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Heartbeat check",
+      "daily_count": 78,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T19:49:11.436514",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Write creative story",
+      "daily_count": 79,
+      "decision_reason": "direct_selection"
+    },
+    {
+      "timestamp": "2026-02-21T20:19:07.933178",
+      "model": "moonshot/kimi-k2.5",
+      "task_type": "Summarize today's work",
+      "daily_count": 80,
+      "decision_reason": "direct_selection"
+    }
+  ]
 }
