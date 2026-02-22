@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Constellation Diagnostic</title>
+    <style>
+        body { font-family: monospace; background: #0a0a0a; color: #00ff00; padding: 20px; }
+        .test { margin: 10px 0; padding: 10px; border: 1px solid #333; }
+        .pass { color: #00ff00; }
+        .fail { color: #ff0000; }
+        .warning { color: #ffff00; }
+    </style>
+</head>
+<body>
+    <h1>Constellation Diagnostic Tool</h1>
+    
+    <div class="test" id="test1">
+        <h3>Test 1: Canvas Element</h3>
+        <div id="result1">Testing...</div>
+    </div>
+    
+    <div class="test" id="test2">
+        <h3>Test 2: JavaScript Loading</h3>
+        <div id="result2">Testing...</div>
+    </div>
+    
+    <div class="test" id="test3">
+        <h3>Test 3: Animation Frame</h3>
+        <div id="result3">Testing...</div>
+    </div>
+    
+    <div class="test" id="test4">
+        <h3>Test 4: Mobile Viewport</h3>
+        <div id="result4">Testing...</div>
+    </div>
+    
+    <script>
+        // Test 1: Check if we can access constellation canvas
+        const test1 = document.getElementById('result1');
+        const canvas = document.getElementById('constellation-canvas');
+        
+        if (canvas) {
+            test1.innerHTML = '<span class="pass">✓ Canvas found</span>';
+            test1.innerHTML += '<br>Dimensions: ' + canvas.offsetWidth + 'x' + canvas.offsetHeight;
+            test1.innerHTML += '<br>Client Rect: ' + JSON.stringify(canvas.getBoundingClientRect());
+        } else {
+            test1.innerHTML = '<span class="fail">✗ Canvas NOT found</span>';
+            test1.innerHTML += '<br>Looking for: #constellation-canvas';
+        }
+        
+        // Test 2: Check if constellation JavaScript is loaded
+        const test2 = document.getElementById('result2');
+        const scripts = document.getElementsByTagName('script');
+        let constellationScriptFound = false;
+        
+        for (let script of scripts) {
+            if (script.textContent.includes('constellation') || 
+                script.src.includes('constellation')) {
+                constellationScriptFound = true;
+                break;
+            }
+        }
+        
+        if (constellationScriptFound) {
+            test2.innerHTML = '<span class="pass">✓ Constellation script found</span>';
+        } else {
+            test2.innerHTML = '<span class="fail">✗ No constellation script found</span>';
+        }
+        
+        // Test 3: Check requestAnimationFrame support
+        const test3 = document.getElementById('result3');
+        if (window.requestAnimationFrame) {
+            test3.innerHTML = '<span class="pass">✓ requestAnimationFrame supported</span>';
+        } else {
+            test3.innerHTML = '<span class="fail">✗ requestAnimationFrame NOT supported</span>';
+        }
+        
+        // Test 4: Check mobile viewport
+        const test4 = document.getElementById('result4');
+        const isMobile = window.innerWidth <= 768;
+        const viewport = document.querySelector('meta[name="viewport"]');
+        
+        test4.innerHTML = 'Window width: ' + window.innerWidth + 'px';
+        test4.innerHTML += '<br>Mobile detection: ' + (isMobile ? '<span class="warning">Mobile</span>' : '<span class="pass">Desktop</span>');
+        
+        if (viewport) {
+            test4.innerHTML += '<br><span class="pass">✓ Viewport meta tag found</span>';
+            test4.innerHTML += '<br>Content: ' + viewport.getAttribute('content');
+        } else {
+            test4.innerHTML += '<br><span class="warning">⚠ No viewport meta tag</span>';
+        }
+        
+        // Check for JavaScript errors
+        window.onerror = function(msg, url, line, col, error) {
+            console.error('JavaScript Error:', msg, 'at', url + ':' + line);
+            test2.innerHTML += '<br><span class="fail">✗ JavaScript Error: ' + msg + '</span>';
+            return false;
+        };
+        
+        console.log('Constellation diagnostic complete');
+    </script>
+</body>
+</html>
