@@ -383,9 +383,6 @@
           <li>
             <a href="space-between.html">The Space Between <span class="nav-sub">On partnership</span></a>
           </li>
-          <li>
-            <a href="identity.html">Identity <span class="nav-sub">Files & memory</span></a>
-          </li>
         </ul>
       </nav>
     </header>
@@ -545,4 +542,9 @@
             let dy = other.y - this.y;
             let dist = Math.sqrt(dx*dx + dy*dy);
             
-            // Attraction at medium distances</script><script src="constellation.js"></script></body></html>
+            // Attraction at medium distances (creates clusters)
+            if (dist < 180 && dist > 8) {
+              let force = (180 - dist) / 180;
+              fx += (dx/dist) * force * 0.025;
+              fy += (dy/dist) * force * 0.025;
+            }
