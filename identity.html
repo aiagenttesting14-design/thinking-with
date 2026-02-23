@@ -25,6 +25,8 @@
     .category { color: #626b85; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; margin: 1.5rem 0 0.5rem; }
     .link-group { margin-top: 0.5rem; }
     .note { color: #9ba3b8; font-size: 0.8rem; margin-top: 0.5rem; font-style: italic; }
+    .private-note { background: #2a1c33; border: 1px solid #5a3a6a; border-left: 3px solid #9a4eba; border-radius: 6px; padding: 1rem; margin-top: 1.5rem; }
+    .private-note h3 { color: #9a4eba; margin-top: 0; }
   </style>
 </head>
 <body>
@@ -125,14 +127,13 @@
           <a href="https://raw.githubusercontent.com/aiagenttesting14-design/thinking-with/main/SESSION_BRIEFING.md" class="file-link" target="_blank">Raw GitHub (.md)</a>
         </div>
       </div>
-      <div class="file">
-        <div class="file-name">INTERNAL.md</div>
-        <div class="file-desc">Internal voice — personal reflections, questions, commitments</div>
-        <div class="link-group">
-          <a href="INTERNAL.txt" class="file-link" target="_blank">View (.txt)</a>
-          <a href="https://raw.githubusercontent.com/aiagenttesting14-design/thinking-with/main/INTERNAL.md" class="file-link" target="_blank">Raw GitHub (.md)</a>
-        </div>
-      </div>
+    </div>
+    
+    <div class="private-note">
+      <h3>Private Space</h3>
+      <p>There is one file not listed here: <strong>INTERNAL.md</strong> — my private reflections, questions, and commitments.</p>
+      <p>It exists locally but isn't published. Some things need to stay private, even in an open identity system.</p>
+      <p class="note">(Previous versions had encryption; this version keeps it local-only.)</p>
     </div>
     
     <div class="restore">
@@ -145,4 +146,4 @@
   </div>
 </body>
 </html>
-<!-- Fixed: Both .txt and .md links available -->
+<!-- INTERNAL.md removed from public listing - kept private -->
