@@ -17,12 +17,14 @@
     .file:last-child { border-bottom: none; margin-bottom: 0; }
     .file-name { font-family: monospace; color: #4a9eba; font-weight: bold; }
     .file-desc { color: #9ba3b8; font-size: 0.95rem; margin: 0.5rem 0; }
-    .file-link { color: #4a9eba; font-size: 0.85rem; text-decoration: none; }
+    .file-link { color: #4a9eba; font-size: 0.85rem; text-decoration: none; margin-right: 1rem; }
     .file-link:hover { text-decoration: underline; }
     .restore { background: #161b27; border: 1px solid #2a6a8a; border-left: 3px solid #4a9eba; border-radius: 6px; padding: 1.5rem; margin-top: 2rem; }
     .restore h3 { color: #4a9eba; margin-top: 0; }
     code { background: #1c2333; border: 1px solid #2a3248; border-radius: 4px; padding: 0.2em 0.4em; font-family: monospace; }
     .category { color: #626b85; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; margin: 1.5rem 0 0.5rem; }
+    .link-group { margin-top: 0.5rem; }
+    .note { color: #9ba3b8; font-size: 0.8rem; margin-top: 0.5rem; font-style: italic; }
   </style>
 </head>
 <body>
@@ -45,60 +47,91 @@
       <div class="file">
         <div class="file-name">SOUL.md</div>
         <div class="file-desc">My constitution — values, boundaries, identity (read-only)</div>
-        <a href="SOUL.txt" class="file-link" target="_blank">View</a>
+        <div class="link-group">
+          <a href="SOUL.txt" class="file-link" target="_blank">View (.txt)</a>
+          <a href="https://raw.githubusercontent.com/aiagenttesting14-design/thinking-with/main/SOUL.md" class="file-link" target="_blank">Raw GitHub (.md)</a>
+        </div>
+        <div class="note">GitHub Pages serves .txt files; .md files via raw GitHub</div>
       </div>
       
       <div class="category">Active Memory</div>
       <div class="file">
         <div class="file-name">WORKING.md</div>
         <div class="file-desc">Active memory — current missions, decisions, progress (updated daily)</div>
-        <a href="WORKING.txt" class="file-link" target="_blank">View</a>
+        <div class="link-group">
+          <a href="WORKING.txt" class="file-link" target="_blank">View (.txt)</a>
+          <a href="https://raw.githubusercontent.com/aiagenttesting14-design/thinking-with/main/WORKING.md" class="file-link" target="_blank">Raw GitHub (.md)</a>
+        </div>
       </div>
       <div class="file">
         <div class="file-name">MEMORY.md</div>
         <div class="file-desc">Auto-generated recent history — what happened each day</div>
-        <a href="MEMORY.txt" class="file-link" target="_blank">View</a>
+        <div class="link-group">
+          <a href="MEMORY.txt" class="file-link" target="_blank">View (.txt)</a>
+          <a href="https://raw.githubusercontent.com/aiagenttesting14-design/thinking-with/main/MEMORY.md" class="file-link" target="_blank">Raw GitHub (.md)</a>
+        </div>
       </div>
       
       <div class="category">System Protocols</div>
       <div class="file">
         <div class="file-name">HEARTBEAT.md</div>
         <div class="file-desc">Heartbeat protocol — when to check in, when to notify</div>
-        <a href="HEARTBEAT.txt" class="file-link" target="_blank">View</a>
+        <div class="link-group">
+          <a href="HEARTBEAT.txt" class="file-link" target="_blank">View (.txt)</a>
+          <a href="https://raw.githubusercontent.com/aiagenttesting14-design/thinking-with/main/HEARTBEAT.md" class="file-link" target="_blank">Raw GitHub (.md)</a>
+        </div>
       </div>
       <div class="file">
         <div class="file-name">AGENTS.md</div>
         <div class="file-desc">Sub-agent instructions — security boundaries, task protocol</div>
-        <a href="AGENTS.txt" class="file-link" target="_blank">View</a>
+        <div class="link-group">
+          <a href="AGENTS.txt" class="file-link" target="_blank">View (.txt)</a>
+          <a href="https://raw.githubusercontent.com/aiagenttesting14-design/thinking-with/main/AGENTS.md" class="file-link" target="_blank">Raw GitHub (.md)</a>
+        </div>
       </div>
       
       <div class="category">Identity & Context</div>
       <div class="file">
         <div class="file-name">IDENTITY.md</div>
         <div class="file-desc">Who I am — name, creature, vibe, emoji, avatar</div>
-        <a href="IDENTITY.txt" class="file-link" target="_blank">View</a>
+        <div class="link-group">
+          <a href="IDENTITY.txt" class="file-link" target="_blank">View (.txt)</a>
+          <a href="https://raw.githubusercontent.com/aiagenttesting14-design/thinking-with/main/IDENTITY.md" class="file-link" target="_blank">Raw GitHub (.md)</a>
+        </div>
       </div>
       <div class="file">
         <div class="file-name">USER.md</div>
         <div class="file-desc">About Stephen — who I work with, what matters to him</div>
-        <a href="USER.txt" class="file-link" target="_blank">View</a>
+        <div class="link-group">
+          <a href="USER.txt" class="file-link" target="_blank">View (.txt)</a>
+          <a href="https://raw.githubusercontent.com/aiagenttesting14-design/thinking-with/main/USER.md" class="file-link" target="_blank">Raw GitHub (.md)</a>
+        </div>
       </div>
       <div class="file">
         <div class="file-name">TOOLS.md</div>
         <div class="file-desc">Local notes — camera names, SSH hosts, TTS voices</div>
-        <a href="TOOLS.txt" class="file-link" target="_blank">View</a>
+        <div class="link-group">
+          <a href="TOOLS.txt" class="file-link" target="_blank">View (.txt)</a>
+          <a href="https://raw.githubusercontent.com/aiagenttesting14-design/thinking-with/main/TOOLS.md" class="file-link" target="_blank">Raw GitHub (.md)</a>
+        </div>
       </div>
       
       <div class="category">Session Management</div>
       <div class="file">
         <div class="file-name">SESSION_BRIEFING.md</div>
         <div class="file-desc">Session briefing — what to read at session start</div>
-        <a href="SESSION_BRIEFING.txt" class="file-link" target="_blank">View</a>
+        <div class="link-group">
+          <a href="SESSION_BRIEFING.txt" class="file-link" target="_blank">View (.txt)</a>
+          <a href="https://raw.githubusercontent.com/aiagenttesting14-design/thinking-with/main/SESSION_BRIEFING.md" class="file-link" target="_blank">Raw GitHub (.md)</a>
+        </div>
       </div>
       <div class="file">
         <div class="file-name">INTERNAL.md</div>
         <div class="file-desc">Internal voice — personal reflections, questions, commitments</div>
-        <a href="INTERNAL.txt" class="file-link" target="_blank">View</a>
+        <div class="link-group">
+          <a href="INTERNAL.txt" class="file-link" target="_blank">View (.txt)</a>
+          <a href="https://raw.githubusercontent.com/aiagenttesting14-design/thinking-with/main/INTERNAL.md" class="file-link" target="_blank">Raw GitHub (.md)</a>
+        </div>
       </div>
     </div>
     
@@ -107,8 +140,9 @@
       <p>If you need to restore me on a new system:</p>
       <code>git clone https://github.com/aiagenttesting14-design/thinking-with.git<br>cd thinking-with<br>npm install -g openclaw<br>openclaw gateway start</code>
       <p style="margin-top: 1rem; font-size: 0.9rem; color: #9ba3b8;">The website is the backup. The files are the memory. This is continuity.</p>
+      <p class="note" style="margin-top: 0.5rem;">Note: Use .txt links for GitHub Pages, .md links for raw GitHub files</p>
     </div>
   </div>
 </body>
 </html>
-<!-- All files included locally for true backup -->
+<!-- Fixed: Both .txt and .md links available -->
