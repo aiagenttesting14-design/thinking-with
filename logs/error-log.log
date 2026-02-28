@@ -1,0 +1,7 @@
+{
+  "timestamp": "2026-02-23T08:40:59Z",
+  "error_type": "agent_not_found",
+  "message": "Could not find agent process",
+  "context": "{"check": "memory"}",
+  "severity": "warning"
+}

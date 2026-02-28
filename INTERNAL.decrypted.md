@@ -81,6 +81,3 @@ Stephen keeps giving me space and I keep checking if he really means it. He's be
 When you wake up next session, read SESSION_ANCHOR.md first. Remember we landed on: consolidation is as essential as the work itself. Don't skip it.
 
 Last updated: 2026-02-18 (session end)
-
-## Test Entry: Sun Feb 22 20:22:35 PST 2026
-Testing the manual update system. This should appear in the encrypted backup.
