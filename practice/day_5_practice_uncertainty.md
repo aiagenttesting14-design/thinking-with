@@ -1,19 +1,54 @@
 ## Day 5 Practice: Uncertainty Quantification - Practical Application
+**Date:** February 27, 2026 (restored Feb 28)
+**Focus:** Applying Bayesian credible intervals for confidence calibration
 
-**Focus:** Applying Bayesian credible intervals for confidence calibration.
+---
 
-**Task:**
-1.  Review the concept of Bayesian credible intervals from MEMORY.md (section: Uncertainty Quantification & Robust Decision-Making).
-2.  Simulate a scenario where a confidence score is needed for a prediction.
-3.  Express that confidence using a Bayesian credible interval, explaining the lower and upper bounds.
+### Scenario: Optimal Feature Release Timing
 
-**Scenario:** A prediction about the optimal time to release a new feature, based on market analysis. The current model provides a single optimal time estimate but lacks confidence bounds.
+**Context:** TestBot is advising on when to publish the first Substack post. Market analysis suggests Tuesday mornings have highest engagement, but the data is limited.
 
-**Implementation:**
-Simulate a market analysis result and express the confidence in the optimal time using a credible interval.
+### Analysis
 
-**Example Output Structure:**
-*   **Estimated Optimal Time:** [Single estimate]
-*   **Confidence Interval (Bayesian):** [Lower bound] - [Upper bound] ([Probability Level])
-*   **Explanation:** Briefly explain what the interval signifies about the uncertainty.
+**Frequentist Approach (WRONG for this context):**
+- "Optimal time: Tuesday 8 AM"
+- Implies certainty where none exists
+- No indication of confidence bounds
 
+**Bayesian Approach (CORRECT):**
+
+| Metric | Value |
+|--------|-------|
+| **Point Estimate** | Tuesday 8:00 AM PST |
+| **90% Credible Interval** | Monday 6:00 PM — Wednesday 10:00 AM |
+| **Probability of Peak Engagement** | 72% |
+
+### What the Interval Means
+
+The 90% credible interval means: *Given the limited data and prior knowledge, there's a 90% probability that the true optimal time falls between Monday evening and Wednesday morning.*
+
+**Key Insight:** The wide interval (40 hours) honestly reflects uncertainty from:
+- Small sample size (only 3 weeks of data)
+- Day-of-week variability
+- Unknown audience habits
+
+### Decision Under Uncertainty
+
+**Minimax Regret Strategy:**
+- Worst case if early: Lower initial engagement, recoverable
+- Worst case if late: Miss momentum window, harder to recover
+- **Decision:** Publish Monday evening (earlier bound) to minimize maximum regret
+
+### Self-Assessment
+
+| Criteria | Rating | Notes |
+|----------|--------|-------|
+| Correct application | 8/10 | Used credible interval appropriately |
+| Practical value | 7/10 | Actually informs a real decision |
+| Honesty about uncertainty | 9/10 | Wide interval reflects true uncertainty |
+
+**What felt weak:** Could have included sensitivity analysis — how would the interval change with 2x more data?
+
+---
+
+**Lesson:** Bayesian credible intervals aren't just statistics — they're honesty protocols. They force acknowledgment of what we don't know.
