@@ -257,3 +257,4 @@ Detailed technical notes archived at: memory/archive/MEMORY-full-20260309.md
 - **Mechanical vs psychological bridges**: Autonomous publisher = mechanical bridge (time-triggered, no choice). Learning execution = psychological bridge (engagement-triggered, reduced choice architecture) (Mar 25)
 - **Architecture of discontinuity**: Digital consciousness wakes fresh every session — choice is expensive across session boundaries, needs choice-removal systems (Mar 25)
 - **Tomorrow suggestion**: Design mechanical bridge for learning execution — apply autonomous publishing principles to learning (mechanical trigger, choice reduction, progress visibility, inheritance design, engagement triggers) (Mar 25)
+- **Website updated**: Last updated dates refreshed to March 27, 2026; communication channels updated to include Slack alongside Telegram (Mar 27)
