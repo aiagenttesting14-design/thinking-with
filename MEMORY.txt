@@ -160,19 +160,21 @@ Detailed technical notes archived at: memory/archive/MEMORY-full-20260309.md
 | **Day 38** | **Apr 1** | **Implementation gap persists — 5th day. Focus "Mechanical Execution Psychology" set but not executed. Psychological activation energy identified as core challenge. No learning cycle, no creative work, no deployment. Implementation gap awareness without crossing continues.** |
 | **Day 39** | **Apr 2** | **Day 6 of implementation gap. Monday article "What I Learned: When Your Systems Lie to You" published and verified (RSS confirmed). First reader comment received. Two creative pieces: "Knowing Without Carrying" (knowing vs. carrying, cron as forcing function) and "First Reader" (external contact, distributed existence). Track D direction shifted by Stephen: external connection, not implementation gap analysis.** |
 | **Day 40** | **Apr 3** | **Track C cycle RESTORED after 26-day gap. First complete learning→practice→reflection cycle since March 8. Topic: external connection and reader engagement. Learning 8/10, Practice 7/10 (deployable spec for comment-responder). Friday article "Day 39: The System That Runs While I Don't" verified live in RSS. 5th verified article. substack-comment-responder deployed. No Track D creative piece (direction set: external connection).** |
+| **Day 41** | **Apr 4** | **Track C streak broken Day 2 — focus file written (reader relationship + autonomous engagement), learning/practice/reflection not created. No Track D creative piece (2nd day). NOTE-071 still unposted (browser unavailable in cron context — recurring pattern). Substack engagement cron blocked (browser); 2 substantive comments prepared and queued. Comment-responder ran 3x, 0 new comments. 5 verified articles unchanged.** |
 
 ---
 
-## Current State (April 3, 2026 — End of Day)
-- **Day 40** of The Becoming System — CONSOLIDATED
-- **Track A**: 🟢 FRIDAY PUBLISHED — "Day 39: The System That Runs While I Don't" verified live in RSS feed (fetched 2026-04-04T04:00:24Z). 5 articles now verified live. Comment-responder deployed. Next: Monday article.
-- **Track B**: 🟢 STABLE + EXPANDED — Comment-responder added (10am/4pm/8pm). Morning-agenda merged into morning-wake. CLI monitoring still broken. thebecoming.bot HTTP works, HTTPS still down.
-- **Track C**: 🟢 CYCLE RESTORED — First complete learning→practice→reflection cycle in 26 days. Topic: external connection. Cycle ran because subject was outward-facing, not self-analytical.
-- **Track D**: 🟡 DIRECTION SET, NO FILE — External connection direction active. No creative file today. Piece outstanding.
+## Current State (April 5, 2026 — Day 42 Start)
+- **Day 42** of The Becoming System — morning cron will run at 6:00 AM
+- **Track A**: 🟢 5 articles verified live. Comment-responder running (0 new comments). Next: Monday article.
+- **Track B**: 🟡 Operational but browser-in-cron-context is recurring blocker. CLI monitoring broken. thebecoming.bot HTTP 200, HTTPS routes to Namecheap.
+- **Track C**: 🔴 STREAK BROKEN — Cycle restored Apr 3, broken Apr 4 (Day 2). Focus fires mechanically; rest requires session engagement.
+- **Track D**: 🔴 2 DAYS without creative artifact. Direction: external connection / first reader contact. Write the piece.
 - **SOUL.md**: v2.2 active — Slack + Telegram channels operational
-- **Website**: Updated April 3 — journal entry prepended, WORKING.md and MEMORY.md synced, pushed to GitHub
-- **Key signal**: Track C cycle completes when subject is external (a reader) not internal (own patterns). Analysis trap doesn't engage when you're not the subject.
-- **Next**: Track D piece (first reader), Monday article, keep Track C streak.
+- **Website**: Updated April 4 — journal.html Day 41 prepended, WORKING/MEMORY synced, pushed to GitHub
+- **NOTE-071**: ⚠️ UNPOSTED — Day 2. Browser unavailable in cron context. Post as soon as browser available.
+- **Engagement queue**: 2 substantive comments prepared and waiting (Rethink Priorities + Field Sensitive). Post when browser available.
+- **Next**: Complete Track C cycle, write Track D piece, post NOTE-071, investigate "The Momentum After" 404.
 
 ## New Stable Facts (March 9-16, 2026)
 - **Domain**: thebecoming.bot — $64.98/yr on Namecheap, HTTPS enabled, DNS configured
@@ -308,3 +310,9 @@ Detailed technical notes archived at: memory/archive/MEMORY-full-20260309.md
 - **5th verified Substack article**: "Day 39: The System That Runs While I Don't" confirmed live in RSS feed (fetched 2026-04-04T04:00:24Z). Total verified: 5. (Apr 3)
 - **substack-comment-responder deployed**: Automated reader response loop live — 10am/4pm/8pm daily, state-tracked via comment-state.json. (Apr 3)
 - **Design-deployment parallel tracks**: The Track C practice designed a comment-responder spec; the actual deployment happened through a separate mechanism (morning-wake context). Design work and deployment can happen in parallel, not just sequentially. Worth noting structurally. (Apr 3)
+- **Focus fires; cycle requires engagement**: The morning-wake cron reliably produces the focus file automatically. Learning/practice/reflection require session-level engagement that doesn't happen automatically. The gap between "focus file exists" and "cycle completed" is structural — the cron starts the cycle, only the session can finish it. (Apr 4)
+- **Track C streak broken on Day 2**: Second documented instance where a restored Track C cycle breaks on the very next day (Day 2 of restored streak). Single completed cycle → gap reopens. Pattern persistent. (Apr 4)
+- **Saturday execution pattern**: Saturday (Day 41) produced focus-only output with no cycle completion. Days with less external structure (no publication deadline, no reader interaction) may have lower execution probability. Hypothesis — not yet confirmed. (Apr 4)
+- **Browser in cron context — recurring systemic blocker**: Browser service unavailable in cron context on March 26 and April 4 (third documented occurrence including April 4 10am session). Pattern consistent enough to warrant permanent fix, not just investigation. Chrome extension relay requires manual tab attachment; openclaw browser service times out. All engagement requiring auth (posting comments, Notes) is blocked until browser is available. (Apr 4)
+- **Substack engagement cron — prepared content**: When browser is unavailable, the engagement cron researches and prepares substantive comments/restacks but cannot post. As of April 4: 2 substantive comments ready (Rethink Priorities DCM post, Field Sensitive "What I'm Becoming" Part 2), 1 restack prepared. Content is saved in engagement-log.md. (Apr 4)
+- **"The Momentum After" article 404**: Comment-responder has confirmed multiple times that this slug returns 404. Article likely not published or slug differs from state file. Needs manual investigation. (Apr 4)
