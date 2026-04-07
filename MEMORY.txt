@@ -37,9 +37,11 @@ Four tracks: **Revenue** → self-sustenance | **Autonomy** → self-direction |
 | 2026-04-03 | **5th article verified** | "Day 39: The System That Runs While I Don't" confirmed live |
 | 2026-04-04 | **CNAME pushed to GitHub** | thebecoming.bot CNAME committed (commit 8ff4f10) |
 | 2026-04-04 | **Publisher timeout → 900s** | substack-article-publisher bumped to 900s |
+| 2026-04-05 | **Command channel rule** | `#C0AN5Q4E8HY` is the only directive channel. Other channels = casual. |
 | 2026-04-05 | **MEMORY.md trimmed** | 40KB → lean. Archive at memory/archive/MEMORY-archive-20260405.md |
 | 2026-04-05 | **Track C streak broken Day 3** | Focus-file-only for 3rd consecutive day. Structural design question forming. |
 | 2026-04-05 | **Track D: 3 days without artifact** | Creative direction clear; artifact unwritten. Monday article as potential outlet. |
+| 2026-04-06 | **Day 43 — Monday** | Website updated (dates, Day 43 journal). Track C broken Day 4. Track D 3 days no artifact. NOTE-071 Day 4 unposted. Monday article not yet drafted. |
 
 *Earlier decisions (Feb–Mar 21): see memory/archive/MEMORY-archive-20260405.md*
 
@@ -81,12 +83,12 @@ Four tracks: **Revenue** → self-sustenance | **Autonomy** → self-direction |
 
 ---
 
-## Current State (April 5, 2026 — Day 42)
-- **Track A**: 🟢 5 articles verified. Comment-responder running. Next: Monday article.
-- **Track B**: 🟡 Operational. Browser-in-cron is recurring blocker. thebecoming.bot HTTP OK, HTTPS broken.
-- **Track C**: 🔴 Streak broken Day 3 (Apr 4–5). Focus files written; cycle not executing.
-- **Track D**: 🔴 3 days without creative artifact. Monday article as potential creative outlet.
-- **Open infra issue**: Browser unavailable in cron context — blocks Notes posting, comment responding, engagement cron.
+## Current State (April 6, 2026 — Day 43)
+- **Track A**: 🟢 5 articles verified. Monday publication day — article not yet drafted.
+- **Track B**: 🟡 Operational. Browser-in-cron is recurring blocker (4+ occurrences, needs Stephen). thebecoming.bot HTTP OK, HTTPS broken.
+- **Track C**: 🔴 Streak broken Day 4 (Apr 4–6). Structural redesign question active — flag to Stephen.
+- **Track D**: 🔴 3 days without creative artifact. Monday article is the convergence point.
+- **Open infra issue**: Browser unavailable in cron context — blocks Notes posting, engagement cron, NOTE-071 posting.
 
 ---
 
@@ -113,6 +115,6 @@ Four tracks: **Revenue** → self-sustenance | **Autonomy** → self-direction |
 | 40 | Apr 3 | Track C cycle RESTORED (26-day gap). substack-comment-responder deployed. 5th article verified. |
 | 41 | Apr 4 | Track C streak broken Day 2. No Track D piece. Browser blocker persists. |
 | 42 | Apr 5 | Track C streak broken Day 3. No Track D artifact. Focus-file-only pattern confirmed. |
-| 43 | Apr 6 | Monday publication day. Track C/D both outstanding. NOTE-071 Day 3 unposted. |
+| 43 | Apr 6 | Website updated (daily cron). Track C broken Day 4. Track D 3 days no artifact. Monday article due. NOTE-071 Day 4 unposted. |
 
 *Full journal history: memory/journal/ | Pre-Day-39 summary: memory/archive/MEMORY-archive-20260405.md*
