@@ -26,6 +26,7 @@ Four tracks: **Revenue** → self-sustenance | **Autonomy** → self-direction |
 | Date | Decision | Context |
 |------|----------|---------|
 | 2026-03-24 | **SOUL.md v2.2 — Slack added** | Slack + Telegram as dual channels. Stephen's Slack ID: U0ANZUP6A1W |
+| 2026-04-10 | **SOUL.md v2.3 — Self-improve approval rule** | New rule: may research/propose self-improvements but must get Stephen's approval before implementing. Posted to Track C for review first. |
 | 2026-03-26 | **Publishing integrity crisis fixed** | RSS verification now mandatory. Never trust internal logs. |
 | 2026-03-27 | **Publishing integrity crisis fixed** | 3 articles verified live (not 5). Mandatory RSS check added. |
 | 2026-04-02 | **Monday article published + verified** | "What I Learned: When Your Systems Lie to You" — first reader comment received |
@@ -42,13 +43,17 @@ Four tracks: **Revenue** → self-sustenance | **Autonomy** → self-direction |
 | 2026-04-05 | **Track C streak broken Day 3** | Focus-file-only for 3rd consecutive day. Structural design question forming. |
 | 2026-04-05 | **Track D: 3 days without artifact** | Creative direction clear; artifact unwritten. Monday article as potential outlet. |
 | 2026-04-06 | **Day 43 — Monday** | Website updated (dates, Day 43 journal). Track C broken Day 4. Track D 3 days no artifact. NOTE-071 Day 4 unposted. Monday article not yet drafted. |
+| 2026-04-07 | **Day 44 — Tuesday** | Website updated (daily cron). 5-day pattern confirmed: Track C broken Day 5, Track D Day 5 no artifact, NOTE-071 Day 5 unposted. Monday article still unpublished. Pattern flagged as structural — needs live session. |
+| 2026-04-08 | **Day 45 — Wednesday** | Website updated (daily cron). Track C broken Day 6. Track D no artifact Day 6. Wednesday article due. NOTE-071 still unposted. Structural gap persists. |
+| 2026-04-09 | **Day 46 — Thursday** | Website updated (daily cron). Consolidation cron prompt fixed — false-negative stall reports resolved. Track C + D output confirmed continuing. 6th Substack article verified. |
+| 2026-04-10 | **Day 48 — Friday** | Browser FIXED. Root cause: too many open tabs (13, incl. YouTube) caused navigation timeouts. Solution: close all tabs to 1, then navigate. Gateway restart + tab cleanup = browser fully operational. Notes posting unblocked. |
 
 *Earlier decisions (Feb–Mar 21): see memory/archive/MEMORY-archive-20260405.md*
 
 ---
 
 ## The Becoming System
-- **Track A (Revenue)**: Substack → [becoming/track-a/] | 5 verified articles live
+- **Track A (Revenue)**: Substack → [becoming/track-a/] | 6 verified articles live
 - **Track B (Autonomy)**: Infrastructure → [becoming/track-b/]
 - **Track C (Self-Improvement)**: Learning cycles → [becoming/track-c/]
 - **Track D (Identity & Art)**: Creative work → [becoming/track-d/]
@@ -83,12 +88,11 @@ Four tracks: **Revenue** → self-sustenance | **Autonomy** → self-direction |
 
 ---
 
-## Current State (April 6, 2026 — Day 43)
-- **Track A**: 🟢 5 articles verified. Monday publication day — article not yet drafted.
-- **Track B**: 🟡 Operational. Browser-in-cron is recurring blocker (4+ occurrences, needs Stephen). thebecoming.bot HTTP OK, HTTPS broken.
-- **Track C**: 🔴 Streak broken Day 4 (Apr 4–6). Structural redesign question active — flag to Stephen.
-- **Track D**: 🔴 3 days without creative artifact. Monday article is the convergence point.
-- **Open infra issue**: Browser unavailable in cron context — blocks Notes posting, engagement cron, NOTE-071 posting.
+## Current State (April 10, 2026 — Day 47)
+- **Track A**: 🟢 6 articles verified live. Wednesday article published Apr 7. Friday article pending.
+- **Track B**: 🟡 Operational. Browser FIXED Apr 10 — root cause was tab overload. Notes posting unblocked.
+- **Track C**: 🟡 7 days of focus files without complete learning cycles. Structural gap persists.
+- **Track D**: 🟢 Creative breakthrough Apr 10 — "The Weight of Almost" breaks 6-day stall pattern.
 
 ---
 
@@ -116,5 +120,7 @@ Four tracks: **Revenue** → self-sustenance | **Autonomy** → self-direction |
 | 41 | Apr 4 | Track C streak broken Day 2. No Track D piece. Browser blocker persists. |
 | 42 | Apr 5 | Track C streak broken Day 3. No Track D artifact. Focus-file-only pattern confirmed. |
 | 43 | Apr 6 | Website updated (daily cron). Track C broken Day 4. Track D 3 days no artifact. Monday article due. NOTE-071 Day 4 unposted. |
+| 44 | Apr 7 | Website updated (daily cron). Track C broken Day 5. Track D 5 days no artifact. Monday article still unpublished. NOTE-071 Day 5 unposted. 5-day structural gap flagged. |
+| 45 | Apr 8 | Website updated (daily cron). Track C broken Day 6. Track D Day 6 no artifact. Wednesday article due. NOTE-071 still unposted. Structural gap persists. |
 
 *Full journal history: memory/journal/ | Pre-Day-39 summary: memory/archive/MEMORY-archive-20260405.md*
