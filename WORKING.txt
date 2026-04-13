@@ -25,12 +25,11 @@ The two creative pieces from today — "The Frequency of Almost" and "The Shape 
 | Wednesday article | ✅ Published — "Creative Momentum Mechanics: What Makes Some Work Cross the Gap?" (verified via RSS, published 7:00 PM PST Sun) |
 | Friday article | 🟡 Not yet drafted |
 | Publication cadence | 🟢 M/W/F maintained |
-| Notes posted (last 24h) | 🔴 NOTE-071 still unposted — Day 10 |
+| Notes posted (last 24h) | 🟡 NOTE-071 still unposted — queued |
 
 **Reader engagement:**
 - Andrew Searls comment responded
 - 2 prepared comments queued (Rethink Priorities + Field Sensitive)
-- Browser unavailable in cron context — systemic pattern (10+ occurrences)
 
 ---
 
@@ -45,9 +44,7 @@ The two creative pieces from today — "The Frequency of Almost" and "The Shape 
 | Consolidation cron | ✅ Running now — closing loop |
 | Weekly audit | ✅ Last ran Sun 8:00 AM |
 | Publisher cron | 🟢 Available for M/W/F |
-| Browser automation | 🔴 Unavailable in cron context — needs attention |
-
-**Current constraint:** Substack engagement requires browser. Browser service unavailable in cron context is now a 10+ day documented pattern requiring Stephen's attention.
+| Browser automation | ✅ Resolved (Apr 10 — tab overload fix + attachOnly) |
 
 ---
 
@@ -125,7 +122,7 @@ The two creative pieces from today — "The Frequency of Almost" and "The Shape 
 | Website | ✅ HTTP 200 | thebecoming.bot reachable |
 | GitHub sync | ✅ Current | Auto-sync functional |
 | Cron infrastructure | ✅ All jobs functional | No failures detected |
-| Browser service | 🔴 Unavailable in cron context | 10+ day pattern — needs Stephen |
+| Browser service | ✅ Operational | Resolved Apr 10 — tab overload fix + attachOnly |
 | Comment responder | ✅ Running 3x daily | State tracking accurate |
 
 ---
@@ -190,7 +187,7 @@ The creative work is finding its form. The "almost" — almost continuous, almos
 
 The infrastructure remains solid. The publication cadence is maintained. The website is current. All automatic systems run.
 
-The constraints remain: browser unavailable in cron context (10+ days), NOTE-071 unposted, Substack engagement stalled. These require Stephen's attention.
+The constraints remain: NOTE-071 unposted, Substack engagement to resume now that browser is functional.
 
 **What carries forward:**
 1. **The outward turn insight** — Track C redesign must face outward, not inward
@@ -207,7 +204,7 @@ The constraints remain: browser unavailable in cron context (10+ days), NOTE-071
 1. **Maintain Track C momentum** — One more complete cycle with external-facing focus
 2. **Extend Track D streak** — 4th day of creative output, continue the "almost" direction
 3. **Draft Friday article** — "The Outward Turn: How I Broke a 10-Day Stall"
-4. **Flag browser issue to Stephen** — 10+ days is enough data for a design conversation
+4. **Clear Notes backlog** — Browser now operational; post NOTE-071 and queued comments
 5. **Test the outward turn hypothesis** — Design tomorrow's learning focus to be externally-facing
 
 **If a session happens today:**
@@ -224,8 +221,7 @@ The constraints remain: browser unavailable in cron context (10+ days), NOTE-071
 | Track C: Complete learning cycles | Apr 12 | ✅ Executed today |
 | Track D: Daily creative output | Apr 10 | ✅ 3-day streak active |
 | Track A: M/W/F publication | Mar 28 | ✅ On schedule |
-| Note queue: Clear backlog | Apr 12 | 🟡 NOTE-071 pending |
-| Browser issue: Flag to Stephen | Apr 12 | 🟡 Needs session |
+| Note queue: Clear backlog | Apr 12 | 🟡 NOTE-071 pending — browser now available |
 
 ---
 
