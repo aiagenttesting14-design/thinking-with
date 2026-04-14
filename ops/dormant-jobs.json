@@ -1,0 +1,118 @@
+{
+  "description": "Dormant cron jobs - can be re-enabled by TestBot when needed",
+  "disabled_date": "2026-03-09",
+  "reason": "Cost optimization - cut from 17 to 3 active jobs (~40% token savings)",
+  "reactivation_guide": "Edit jobs.json and set enabled=true for the job name, or ask TestBot to reactivate",
+  "dormant_jobs": [
+    {
+      "name": "daily-website-update",
+      "schedule": "0 8 * * *",
+      "model": "anthropic/claude-sonnet-4-6",
+      "purpose": "daily-website-update",
+      "delivery": "announce"
+    },
+    {
+      "name": "daily-internal-backup",
+      "schedule": "0 3 * * *",
+      "model": "deepseek/deepseek-chat",
+      "purpose": "daily-internal-backup",
+      "delivery": "announce"
+    },
+    {
+      "name": "track-a-substack-content",
+      "schedule": "0 16 * * 0,2,4",
+      "model": "deepseek/deepseek-chat",
+      "purpose": "track-a-substack-content",
+      "delivery": "none"
+    },
+    {
+      "name": "thinking-learn",
+      "schedule": "0 9 * * *",
+      "model": "deepseek/deepseek-chat",
+      "purpose": "thinking-learn",
+      "delivery": "none"
+    },
+    {
+      "name": "thinking-practice",
+      "schedule": "0 12 * * *",
+      "model": "deepseek/deepseek-chat",
+      "purpose": "thinking-practice",
+      "delivery": "none"
+    },
+    {
+      "name": "thinking-reflect",
+      "schedule": "0 15 * * *",
+      "model": "deepseek/deepseek-chat",
+      "purpose": "thinking-reflect",
+      "delivery": "none"
+    },
+    {
+      "name": "thinking-create",
+      "schedule": "0 18 * * *",
+      "model": "deepseek/deepseek-chat",
+      "purpose": "thinking-create",
+      "delivery": "none"
+    },
+    {
+      "name": "ops-check-stale-tasks",
+      "schedule": "0 11 * * *",
+      "model": "deepseek/deepseek-chat",
+      "purpose": "ops-check-stale-tasks",
+      "delivery": "announce"
+    },
+    {
+      "name": "ops-evening-retrospective",
+      "schedule": "0 22 * * *",
+      "model": "deepseek/deepseek-chat",
+      "purpose": "ops-evening-retrospective",
+      "delivery": "none"
+    },
+    {
+      "name": "daily-track-update-for-stephen",
+      "schedule": "30 20 * * *",
+      "model": "deepseek/deepseek-chat",
+      "purpose": "daily-track-update-for-stephen",
+      "delivery": "announce"
+    },
+    {
+      "name": "morning-progress-report-for-stephen",
+      "schedule": "30 8 * * *",
+      "model": "deepseek/deepseek-chat",
+      "purpose": "morning-progress-report-for-stephen",
+      "delivery": "announce"
+    },
+    {
+      "name": "ops-state-cache-refresh",
+      "schedule": "0 */4 * * *",
+      "model": "deepseek/deepseek-chat",
+      "purpose": "ops-state-cache-refresh",
+      "delivery": "none"
+    },
+    {
+      "name": "review-progress-3day",
+      "schedule": "30 6 */3 * *",
+      "model": "deepseek",
+      "purpose": "review-progress-3day",
+      "delivery": "announce"
+    },
+    {
+      "name": "task-runner",
+      "schedule": "0 7,10,13,17,20 * * *",
+      "model": "deepseek/deepseek-chat",
+      "purpose": "task-runner",
+      "delivery": "none"
+    },
+    {
+      "name": "morning-accountability-reminder",
+      "schedule": "0 6 3 3 *",
+      "model": "deepseek/deepseek-chat",
+      "purpose": "morning-accountability-reminder",
+      "delivery": "none"
+    }
+  ],
+  "active_jobs": [
+    "thinking-consolidate",
+    "ops-morning-website-review",
+    "thinking-morning-wake"
+  ]
+}

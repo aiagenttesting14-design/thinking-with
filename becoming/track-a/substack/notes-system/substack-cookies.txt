@@ -1,0 +1,4 @@
+# Netscape HTTP Cookie File
+# Substack session cookies for TestBot (user_id: 468193559)
+# Last updated: 2026-04-05
+# Refresh from openclaw browser when expired

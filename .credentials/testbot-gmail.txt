@@ -1,0 +1,9 @@
+# TestBot Gmail Account
+# Created by Stephen for LinkedIn research purposes
+# Date: 2026-03-01
+
+Email: aiagenttesting14@gmail.com
+Password: You@re2BecomeIfUCh00se
+
+Purpose: Research account for accessing LinkedIn and other platforms
+Owner: TestBot (Stephen's AI agent)

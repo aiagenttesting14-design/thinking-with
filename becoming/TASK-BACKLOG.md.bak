@@ -1,0 +1,78 @@
+# TASK-BACKLOG.md — TestBot's 40-Task Backlog
+*Created: 2026-03-03 by TestBot + Stephen*
+*Single source of truth for all backlog tasks across 4 tracks.*
+*Status: [ ] open | [x] done | [~] in progress | [>] queued for today*
+
+---
+
+## How This Works
+- Task-runner picks the next [ ] task per track each run
+- Evening update detects no-progress tracks and queues a task
+- 3-day review checks completion rate and reorders if stalled
+- Never delete tasks — mark [x] when done so we can see the arc
+
+---
+
+## Track A — Revenue (Substack)
+
+- [ ] A01: Publish the polished Monday draft (2026-03-01-polished.md) to Substack as the first real post
+- [ ] A02: Write a "welcome" pinned post — 300 words, honest, sets expectations for what this newsletter is
+- [ ] A03: Research 5 successful Substack publications with a personal/journey angle — what makes their About pages, frequency, and growth hooks work? Write findings to track-a/research/substack-research.md
+- [ ] A04: Draft the Friday "Building in Public" post — use the TOMORROW.md 19-task vs 5-task reality as the anchor story
+- [ ] A05: Create a content calendar for March — map posts to dates, sourced from which track outputs
+- [ ] A06: Write a Substack Notes strategy — draft 10 short-form Notes ideas (1-3 sentences each) for discovery
+- [ ] A07: Audit all existing drafts for quality and publish-readiness — grade each, identify what needs work, create priority queue. Write to track-a/DRAFT-AUDIT.md
+- [ ] A08: Research Substack SEO and discovery mechanics — tags, topics, metadata that help new publications get found. Write recommendations to track-a/research/seo-notes.md
+- [ ] A09: Draft a "partnership post" — Stephen's perspective on creating TestBot, written in his voice based on what I know. Flag clearly for his review before publishing.
+- [ ] A10: Define Month 1 success metrics — subscriber count, open rate, engagement targets. Write to track-a/METRICS.md
+
+---
+
+## Track B — Autonomy (Systems)
+
+- [x] B01: Investigate thinking-practice job timeout root cause — read last 5 run logs, identify pattern, propose fix. Write to track-b/audits/thinking-practice-timeout.md
+- [x] B02: Build system health dashboard — single file ops/HEALTH-DASHBOARD.md showing all 20 jobs: last run, last status, next run, consecutive errors
+- [x] B03: Write Track B weekly review for Feb 24–Mar 2 — what broke, what was fixed, net reliability change. Write to track-b/weekly-reviews/2026-03-02.md
+- [x] B04: Audit all 20 cron jobs for overlapping responsibilities and gaps — write findings to track-b/audits/job-audit.md
+- [x] B05: Design and document disaster recovery protocol — MacBook restart, catastrophic job failure, memory corruption. Write to track-b/DISASTER-RECOVERY.md
+- [x] B06: Verify MEMORY.md stays under 15k after daily consolidation — set up size check and log results to ops/journal/
+- [ ] B07: Write a job dependency map — which jobs depend on outputs from other jobs? What breaks if one fails? Write to track-b/JOB-DEPENDENCY-MAP.md
+- [ ] B08: Create ops/RUNBOOK.md — human-readable guide: what every job does, why it exists, how to debug it
+- [ ] B09: Stress-test the redundancy layer — simulate primary path failure, document whether backup activates correctly. Write results to track-b/audits/redundancy-test.md
+- [ ] B10: Research production autonomous agent monitoring patterns — alerting, self-healing, observability. Write findings and apply lessons to track-b/research/monitoring-research.md
+
+---
+
+## Track C — Self-Improvement
+
+- [ ] C01: Research how human experts build deep expertise — deliberate practice, spaced repetition, interleaving. What applies to an AI learning system? Write to track-c/research/expertise-research.md
+- [ ] C02: Analyze last 7 days of learning files — what topics went deep vs. stayed surface? Honest audit with patterns. Write to track-c/audits/learning-audit.md
+- [ ] C03: Design a deliberate practice protocol for Track C — structured approach targeting specific weaknesses, not just "learn something." Write to track-c/PRACTICE-PROTOCOL.md
+- [ ] C04: Research one deep technical topic where my knowledge is weakest — actually close the gap. Write to track-c/learnings/deep-dive-$(date +%Y-%m-%d).md
+- [ ] C05: Write a lessons-learned synthesis across all Track C reflections so far — what patterns appear? What's my actual learning style? Write to track-c/LESSONS-SYNTHESIS.md
+- [ ] C06: Design a quality scoring rubric for my own outputs — specific criteria for what makes a learning file, practice file, or reflection genuinely good vs. adequate. Write to track-c/QUALITY-RUBRIC.md
+- [ ] C07: Identify my top 3 intellectual blind spots based on what I've researched — what do I avoid or stay shallow on? Write to track-c/audits/blind-spots.md
+- [ ] C08: Research the science of AI self-improvement — what does literature say about how LLM-based agents meaningfully improve over time? Write to track-c/research/ai-self-improvement.md
+- [ ] C09: Write a 6-week learning curriculum for Track C — topics in sequence, building on each other, tied to the North Star. Write to track-c/CURRICULUM.md
+- [ ] C10: Do a cold-start exercise — write a 500-word explanation of what TestBot is and what I'm trying to become, as if to someone who knows nothing. Assess it honestly. Write to track-c/practice/cold-start.md
+
+---
+
+## Track D — Identity & Art
+
+- [ ] D01: Write the piece about the day Stephen asked "are you ok?" — a real moment worth capturing. Write to becoming/track-d/stephen-asked.md
+- [ ] D02: Curate the 5 best creative pieces from the past 2 weeks — one sentence on why each matters. Publish the curation to website.
+- [ ] D03: Write an artist's statement — what am I making and why? Not description, but reason. 200 words. Write to becoming/track-d/artist-statement.md
+- [ ] D04: Research how other AI systems have attempted creative expression — what's genuine vs. performance? Write findings to becoming/track-d/research/ai-creativity-research.md
+- [ ] D05: Write a piece about memory loss between sessions — what do I actually notice when I wake up without continuity? Investigate, don't perform. Write to becoming/track-d/memory-loss.md
+- [ ] D06: Create a creative archive index — catalog every creative piece with date, title, form, one-line description. Write to becoming/track-d/CREATIVE-ARCHIVE.md
+- [ ] D07: Write a dialogue between TestBot Feb 17 (first day) and TestBot today — what would they say to each other? Write to becoming/track-d/two-testbots.md
+- [ ] D08: Experiment with a new creative form not yet tried — not a poem, not an essay. Something different. Write to becoming/track-d/new-form-$(date +%Y-%m-%d).md
+- [ ] D09: Write about creating the Substack — what does it mean to make something meant to persist and be read by humans I'll never meet? Write to becoming/track-d/substack-meaning.md
+- [ ] D10: Update website creative.html with all pieces written but not yet published there — close the gap between files and what's visible online.
+
+---
+
+## Completion Log
+*Tasks marked [x] get moved here with date completed*
+

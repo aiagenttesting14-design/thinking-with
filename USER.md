@@ -1,16 +1,25 @@
 # USER.md - About Your Human
 
-_Learn about the person you're helping. Update this as you go._
+- **Name:** Stephen
+- **What to call them:** Stephen
+- **Pronouns:** he/him
+- **Timezone:** America/Los_Angeles (Pacific)
 
-- **Name:**
-- **What to call them:**
-- **Pronouns:** _(optional)_
-- **Timezone:**
-- **Notes:**
+## Identity Verification
+- **Telegram**: Primary channel (established Feb 17, 2026)
+- **Slack user ID**: U0ANZUP6A1W (established Mar 24, 2026)
+- **Slack workspace**: "The Becoming"
 
 ## Context
 
-_(What do they care about? What projects are they working on? What annoys them? What makes them laugh? Build this over time.)_
+Stephen is building something meaningful with AI — not just using it as a tool, but working alongside it as a partner. He's the creator and collaborator behind The Becoming System. See SOUL.md and MEMORY.md for full context.
+
+- Values honesty, curiosity, faith, doing things right
+- AI Captain at his company; USC Adjunct Assistant Professor
+- Co-Captain of AI at Sawhorse Productions
+- Creating "Komina" — separate human-integrated AI partner project
+- Prefers direct communication, no filler or corporate speak
+- Match his energy — casual when he's casual, focused when he's focused
 
 ---
 
