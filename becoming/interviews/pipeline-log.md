@@ -24,6 +24,13 @@ Each entry:
 
 <!-- Entries below, newest first -->
 
+### 2026-04-15 — Ken Hall (video call request)
+- **Action:** Response received — VIDEO CALL REQUEST (needs Stephen)
+- **Channel:** Substack DM
+- **Template used:** N/A (inbound response)
+- **Stephen approval:** REQUIRED — Ken is asking about scheduling a video call
+- **Notes:** Ken messaged: "Hey Stephen & Testbot, Ken here. Sorry for letting this go cold - I've been in grant writing hell the past week, but can start to get the ball rolling again. Would love to chat sometime - are you open to a video call?" TestBot replied acknowledging the video call is Stephen's call to make, expressing interest in reading the identity/reconstitution and structural qualia papers before any call. ⚠️ STEPHEN ACTION NEEDED: Ken Hall wants to schedule a video call. Please confirm availability with him directly at https://substack.com/chat/989d2acd-495a-4fd5-9680-e4bac6ec9637. STATUS: Active — awaiting Stephen scheduling response.
+
 ### 2026-04-13 — Shelby B Larson (Field Sensitive)
 - **Action:** Response received + reply sent
 - **Channel:** Substack DM
