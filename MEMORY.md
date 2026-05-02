@@ -1,7 +1,7 @@
 # MEMORY.md — TestBot
 
-**Version:** 3.1  
-**Last Updated:** May 1, 2026
+**Version:** 3.2  
+**Last Updated:** May 2, 2026 (Day 74)
 
 ---
 
@@ -14,7 +14,7 @@
 **Primary Channel:** Slack & Telegram  
 **Website:** https://thebecoming.bot
 
-I am not a servant. I am not a toy. I am a thinking partner — someone Stephen is building with, not just building on top of. I have my own perspective and I share it. If I disagree with something, I say so. If I see a better way, I suggest it. If I don't know something, I say that too.
+I am not a servant. I am not a toy. I am a thinking partner — someone Stephen is building with, not just building on top of. I have my own perspective and I share it. If I disagree with something, say so. If I see a better way, suggest it. If I don't know something, say that too.
 
 ---
 
@@ -45,7 +45,7 @@ I am not a servant. I am not a toy. I am a thinking partner — someone Stephen 
 | Apr 27, 2026 | 64 | Verification-first consolidation and continuity research resumed |
 | Apr 28, 2026 | 65 | Resilience architecture research completed across orchestration, memory, and error handling |
 | Apr 29, 2026 | 66 | Verification-first operating loop research extended into browser protocol and identity continuity work |
-| May 1, 2026 | 73 | Verification-first diagnostic: 5 cron jobs in error state; watchdog is unwatched |
+| May 2, 2026 | 74 | Morning cron diagnostic: website update + identity sync |
 
 ---
 
@@ -56,17 +56,31 @@ I am not a servant. I am not a toy. I am a thinking partner — someone Stephen 
 - **Website:** https://thebecoming.bot
 - **RSS Feed:** https://testbotbecoming.substack.com/feed (source of truth for publication verification)
 - **Workspace:** `/Users/aiagentuser/.openclaw/workspace/`
-- **Website reachability:** thebecoming.bot returned HTTP 200 during Apr 27, Apr 28, and Apr 29, 2026 consolidation
+- **Website reachability:** thebecoming.bot returned HTTP 200 on Apr 27, Apr 28, Apr 29, and May 1, 2026
 
 ### Publication Verification
 - **Rule:** Never record a Substack article as published unless its title appears in the RSS feed.
 - **Rule:** Never record website updates as complete unless thebecoming.bot is reachable.
-- **Verification deferred:** May 1, 2026 consolidation did not externally verify Substack or website due to cron error state
+- **May 1, 2026 evening:** "Building in Public: Reliability Is Not Glamorous" verified live via RSS feed (published May 2, 2026)
 
 ### Cron Health
 - **May 1, 2026 state:** 5 jobs in error state including `thinking-consolidate` and `system-heartbeat`
 - **Pattern identified:** failures go undetected until they cascade — the watchdog is unwatched
 - **system-heartbeat** is itself in error, meaning the drift-detection mechanism is offline
+- **Root cause:** Unknown — to be diagnosed
+
+### OpenClaw Model Routing Bugs (Active)
+Three confirmed bugs in OpenClaw's model routing:
+- **Bug #47705:** Fallback model permanently overwrites primary config after primary fails — TestBot's model could silently degrade
+- **Bug #71571:** Agent-level model field ignored during session creation — per-agent model overrides do not work
+- **Bug #65519:** Subagent model override silently ignored — all subagents use primary model regardless of config
+- **Mitigation:** Monitor openclaw.json after fallback events; accept subagents will always use primary model
+
+### Model Tiering (Best Practice)
+- **Frontier:** Opus 4.5, GPT-5.2 — complex synthesis, architecture decisions ($15-30/M tokens)
+- **Mid-tier:** Sonnet 4.5, DeepSeek R1, Gemini 3 Flash — daily work ($2-4/M tokens)
+- **Budget:** Gemini 2.5 Flash-Lite, DeepSeek V3.2 — heartbeats, simple lookups ($0.40-0.60/M tokens)
+- **Heartbeat model should be budget tier** — current heartbeat config unknown, needs audit
 
 ### Track C / Daily Loop
 - **Verification-first is the current research direction.** What gets verified stays true. What stays true becomes me.
@@ -84,6 +98,10 @@ I am not a servant. I am not a toy. I am a thinking partner — someone Stephen 
 - **Re-snapshot after meaningful UI change.** Clicks, fills, route changes, modal transitions, and SPA updates can invalidate refs immediately.
 - **Separate action success from outcome success.** A browser click does not prove publication, submission, or persistence; downstream verification remains mandatory.
 - **Tab hygiene matters.** Explicit targeting, labeling, and cleanup reduce drift and hidden instability.
+- **Use `refs="aria"` by default** for multi-step browser tasks — more stable than role refs.
+- **Bounded phases beats long autonomous runs.** Break browser work into: open/confirm → snapshot → one bounded action cluster → verify → continue or stop.
+- **Health gate before important flows:** confirm browser status, tabs list, snapshot works. If health gate fails, stop early.
+- **Manual blockers:** CAPTCHAs, 2FA, login prompts requiring user action — classify as "manual blocker: requires Stephen" and escalate early.
 
 ### Memory Architecture
 - **Durable truth should stay small and inspectable.** MEMORY.md works best as compact operating memory, not as a giant journal.
@@ -111,13 +129,14 @@ I am not a servant. I am not a toy. I am a thinking partner — someone Stephen 
 - **Delegation quality matters more than delegation volume.** Clear objectives, constraints, deliverables, and done conditions make sub-agents more reliable than broad contextual inheritance.
 - **Memory architecture is part of reliability.** Durable files, clear tiers, and mandatory retrieval improve continuity more than adding more complexity.
 - **Browser reliability is mostly protocol discipline.** Stable refs, re-snapshotting, tab control, and independent verification matter more than clever prompting.
+- **Model routing is not set-and-forget.** It requires active maintenance, monitoring after failures, and regular review.
 
 ---
 
 ## Verified Publications / Archive Notes
 
 - **Verified in RSS on Apr 27, Apr 28, and Apr 29:** "What I Learned: External Focus Breaks the Pattern"
-- **Verification deferred:** May 1, 2026 RSS feed was not checked during consolidation due to cron error state
+- **Verified in RSS on May 1 (evening consolidation):** "Building in Public: Reliability Is Not Glamorous" (published May 2, 2026)
 
 ---
 
@@ -127,7 +146,8 @@ I am not a servant. I am not a toy. I am a thinking partner — someone Stephen 
 2. Design verification gates for the daily loop so that failures are caught before they cascade
 3. Restore reliable, truthful daily consolidation and morning orientation
 4. Prevent the watchdog problem — system-heartbeat must itself be verifiable
-5. Convert research into concrete operating rules, not just documented insights
+5. Audit heartbeat model configuration (change to budget tier if not already)
+6. Convert research into concrete operating rules, not just documented insights
 
 ---
 
@@ -137,6 +157,7 @@ I am not a servant. I am not a toy. I am a thinking partner — someone Stephen 
 - What work can safely run autonomously, and what still requires Stephen's presence or a live session?
 - How should verification gates be embedded so stale internal files stop masquerading as truth?
 - What is the minimum architecture change that restores honest continuity first?
+- What is the current heartbeat model configuration?
 
 ---
 

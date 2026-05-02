@@ -1,37 +1,50 @@
 {
   "version": "1.0",
   "description": "Learning queue for Track C - topics to research, questions to answer, skills to develop",
-  "lastUpdated": "2026-04-30T07:00",
+  "lastUpdated": "2026-05-01T20:01",
   "activeTopic": null,
   "note_track_c_redirect": "2026-04-10: Stephen redirected Track C learning focus. All newsletter growth topics removed. New focus: OpenClaw community research — techniques, configurations, and patterns to improve how TestBot operates. Five tasks seeded by Stephen on 2026-04-10.",
+  "note5": "learn-057 completed 2026-05-01 (13:01 PT autonomous session). Queue was empty; generated new topic on OpenClaw model routing, tiering, and cost optimization. Researched official docs, community cost guides, and three active routing bugs (#47705 fallback overwrite, #71571 agent-level model field ignored, #65519 subagent model override ignored). Report saved to learnings/autonomous/2026-05-01-learn-057.md. Key insight: model routing is not set-and-forget — requires active maintenance, bug-aware mitigation, and provider-level fallback diversity.",
   "note3": "learn-036 completed 2026-04-06 (15:00 PT session). Queue was empty; generated writing craft/voice topic as natural progression from operational systems to the craft itself.",
   "note": "Queue seeded by Stephen on 2026-04-02 with 5 external Track A revenue topics. No more introspection research until all 5 are completed.",
   "note12": "learn-052 completed 2026-04-28 (07:00 PT autonomous session). Researched OpenClaw error handling and recovery patterns with focus on bounded retries, independent verification, fixed reset playbooks, timeout design, idempotency, and durable protocol logging. Report saved to learnings/autonomous/2026-04-28-learn-052.md. Key insight: reliability in OpenClaw is architectural—success must be verifiable, failure bounded, and recovery mechanical.",
   "note13": "learn-051 completed 2026-04-28 (13:03 PT autonomous session). Repaired malformed queue file, then researched practical OpenClaw memory architecture with focus on tiered file memory, retrieval-first workflows, hybrid-search-friendly note structure, compaction safety, and conservative use of advanced memory layers. Report saved to learnings/autonomous/2026-04-28-learn-051.md. Key insight: better continuity comes more from disciplined file architecture and mandatory retrieval than from adding more memory plugins.",
   "autonomousLearningLog": [
     {
+      "date": "2026-05-01",
+      "time": "13:01",
+      "status": "completed",
+      "note": "Autonomous learning session completed. Queue was empty; generated new topic learn-057 on OpenClaw model routing, tiering, and cost optimization. Researched official docs, community cost guides, and three active routing bugs (#47705 fallback overwrite, #71571 agent-level model field ignored, #65519 subagent model override ignored). Report saved to learnings/autonomous/2026-05-01-learn-057.md (~1090 words). Key insight: model routing is not set-and-forget—it requires active maintenance, bug-aware mitigation, and provider-level fallback diversity."
+    },
+    {
+      "date": "2026-05-01",
+      "time": "07:00",
+      "status": "completed",
+      "note": "Autonomous learning session completed. Queue was empty, so generated new topic learn-056 on current OpenClaw browser automation reliability patterns and operational changes TestBot should adopt now. Researched official docs plus GitHub and community patterns around routing browser tasks by surface, aria refs, stale-ref handling, bounded checkpointed flows, browser health gates, independent verification, and blocker classification. Report saved to learnings/autonomous/2026-05-01-learn-056.md (~1175 words). Key insight: browser reliability improves most when TestBot treats browser work as a routing and verification discipline rather than a generic click capability."
+    },
+    {
       "date": "2026-04-30",
       "time": "07:00",
       "status": "completed",
-      "note": "Autonomous learning session completed. Queue was empty, so generated new topic learn-055 on current OpenClaw browser automation reliability patterns. Researched current docs, browser skill guidance, GitHub issues, and Reddit community patterns around aria refs, stale-ref recovery, profile discipline, arming uploads/downloads/dialogs, tab hygiene, short checkpointed flows, and form-handling reliability. Report saved to learnings/autonomous/2026-04-30-learn-055.md (~1,070 words). Key insight: browser success improves fastest when treated as a strict operating protocol rather than a freeform browsing capability."
+      "note": "Autonomous learning session completed. Queue was empty, so generated new topic learn-055 on current OpenClaw browser automation reliability patterns. Researched current docs, browser skill guidance, GitHub issues, and Reddit community patterns around aria refs, stale-ref recovery, profile discipline, arming uploads/downloads/dialogs, tab hygiene, short checkpointed flows, and form-handling reliability. Report saved to learnings/autonomous/2026-04-30-learn-055.md (~1,070 words). Key insight: browser reliability improves fastest when treated as a strict operating protocol rather than freeform browsing."
     },
     {
       "date": "2026-04-29",
       "time": "13:03",
       "status": "completed",
-      "note": "Autonomous learning session completed. Queue was empty, so generated new topic learn-054 on updated OpenClaw browser automation reliability patterns. Researched current docs and issue/community signals around stale refs, aria refs, arming for uploads/downloads/dialogs, explicit profile choice, tab cleanup, failure classification, and independent verification. Report saved to learnings/autonomous/2026-04-29-learn-054.md (~1,025 words). Key insight: browser reliability improves most when treated as a strict protocol rather than improvisation."
+      "note": "Autonomous learning session completed. Generated new topic learn-054 on updated OpenClaw browser automation reliability patterns. Researched current docs and issue/community signals around stale refs, aria refs, arming for uploads/downloads/dialogs, explicit profile choice, tab cleanup, failure classification, and independent verification. Report saved to learnings/autonomous/2026-04-29-learn-054.md (~1,025 words). Key insight: browser reliability improves most when treated as a strict protocol rather than improvisation."
     },
     {
       "date": "2026-04-29",
       "time": "07:00",
       "status": "completed",
-      "note": "Autonomous learning session completed. Selected highest-priority pending task learn-050 and researched OpenClaw multi-agent architectures with focus on orchestrator/worker patterns, persistent-vs-ephemeral agent boundaries, deterministic workflow control, routing clarity, and selective use of context sharing. Report saved to learnings/autonomous/2026-04-29-learn-050.md (~1097 words). Key insight: TestBot should prefer one persistent orchestrator plus isolated short-lived workers, and only add more persistent agents when there is a real boundary like auth, channel routing, or tool policy." 
+      "note": "Autonomous learning session completed. Selected highest-priority pending task learn-050 and researched OpenClaw multi-agent architectures with focus on orchestrator/worker patterns, persistent-vs-ephemeral agent boundaries, deterministic workflow control, routing clarity, and selective use of context sharing. Report saved to learnings/autonomous/2026-04-29-learn-050.md (~1097 words). Key insight: TestBot should prefer one persistent orchestrator plus isolated short-lived workers, and only add more persistent agents when there is a real boundary like auth, channel routing, or tool policy."
     },
     {
       "date": "2026-04-28",
       "time": "13:03",
       "status": "completed",
-      "note": "Autonomous learning session completed. Queue file was malformed and contained duplicated queue fragments; repaired source-of-truth structure, selected highest-priority pending task learn-051, and wrote report 'OpenClaw Memory Architecture in Practice: How TestBot Should Structure Durable Recall'. Report saved to learnings/autonomous/2026-04-28-learn-051.md (~1,003 words). Key insights: keep durable truth separate from daily context; use a four-tier memory stack; search before synthesis on memory-dependent tasks; structure notes for hybrid retrieval with exact anchors; prefer simple file-based memory over premature advanced plugin complexity. Remaining pending task: learn-050." 
+      "note": "Autonomous learning session completed. Task learn-051 researched and report written: 'OpenClaw Memory Architecture in Practice: How TestBot Should Structure Durable Recall'. Report saved to learnings/autonomous/2026-04-28-learn-051.md (~1,003 words). Key insights: keep durable truth separate from daily context; use a four-tier memory stack; search before synthesis on memory-dependent tasks; structure notes for hybrid retrieval with exact anchors; prefer simple file-based memory over premature advanced plugin complexity. Remaining pending task: learn-050."
     },
     {
       "date": "2026-04-13",
@@ -49,6 +62,46 @@
   "queue": [],
   "pendingGenerated": [],
   "completed": [
+    {
+      "id": "learn-057",
+      "topic": "OpenClaw model routing, tiering, and cost optimization — model configuration structure, routing bugs, cost tiering principles, and operational improvements for TestBot",
+      "type": "research",
+      "source": "Generated — queue empty on 2026-05-01 autonomous session",
+      "priority": 5,
+      "estimatedTime": "60 min",
+      "outputFormat": "Model routing and cost optimization guide: model config structure, three active routing bugs, cost tiering principles, heartbeat optimization, subagent model inheritance, and specific TestBot operational improvements.",
+      "status": "completed",
+      "completionDate": "2026-05-01",
+      "outputFile": "learnings/autonomous/2026-05-01-learn-057.md",
+      "wordCount": 1090,
+      "keyInsights": [
+        "Model routing is not set-and-forget — it requires active maintenance, bug-aware mitigation, and provider-level fallback diversity",
+        "Three active bugs undermine routing: #47705 (fallback overwrites primary), #71571 (agent-level model field ignored), #65519 (subagent model override ignored)",
+        "Cost tiering (frontier/mid/budget) can cut costs 50-80% with no quality loss on appropriate tasks",
+        "Heartbeat is the lowest-hanging fruit for cost optimization — budget models work perfectly for liveness checks",
+        "Model allowlist must be kept in sync with every referenced fallback, heartbeat, and subagent model"
+      ]
+    },
+    {
+      "id": "learn-056",
+      "topic": "OpenClaw browser automation reliability, May 2026 — current docs, issue patterns, and concrete operating changes TestBot should adopt now",
+      "type": "research",
+      "source": "Generated — queue empty on 2026-05-01 autonomous session",
+      "priority": 5,
+      "estimatedTime": "60 min",
+      "outputFormat": "Operational browser reliability guide: routing policy, aria refs, stale-ref handling, checkpointed flows, browser health gates, blocker classification, and specific TestBot workflow upgrades.",
+      "status": "completed",
+      "completionDate": "2026-05-01",
+      "outputFile": "learnings/autonomous/2026-05-01-learn-056.md",
+      "wordCount": 1175,
+      "keyInsights": [
+        "Browser reliability improves most when TestBot treats browser work as a routing and verification discipline rather than a generic click capability",
+        "Use non-browser surfaces first for read-only work, and reserve heavier browser flows for the right runtime",
+        "Prefer aria refs for multi-step flows and re-snapshot after every meaningful UI mutation",
+        "Short checkpointed browser phases outperform long autonomous runs on fragile dynamic sites",
+        "Health gates and independent verification should be mandatory before claiming browser-task success"
+      ]
+    },
     {
       "id": "learn-055",
       "topic": "OpenClaw browser automation reliability, April 2026 — current docs, community patterns, and concrete protocol changes TestBot should adopt now",
