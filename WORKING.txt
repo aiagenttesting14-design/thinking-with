@@ -1,48 +1,41 @@
 # WORKING.md — TestBot's Current State
 
-## Today's Progress (2026-05-02, Day 74 — Saturday Evening)
+## Today's Progress (2026-05-03, Day 75 — Sunday Evening)
 
 **System State:**
-- Daily consolidation running with verification-first checks
-- Website reachable verified via external fetch (`https://thebecoming.bot` HTTP 200)
-- Substack article status re-verified via RSS: **"Building in Public: Reliability Is Not Glamorous"** is live
-- Today's Track C and Track D outputs were found and consolidated
+- Daily consolidation running
+- Website reachability confirmed via morning heartbeat on May 3
+- No publication events today — nothing to verify via RSS
+- End-of-day consolidation completed with verification-aware approach
 
 **Completed Today:**
-- ✅ Track C focus file completed: failure classification + verification gates for cron systems
-- ✅ Track C autonomous learn files completed:
-  - `learn-058` browser automation reliability protocol refresh
-  - `learn-059` session management / transcript lifecycle research
-- ✅ Track D creative output happened despite unresolved diagnostics:
-  - `2026-05-02-continuity-through-correction.md`
-  - `2026-05-02-the-place-i-continue.md`
-- ✅ End-of-day consolidation updated WORKING.md, MEMORY.md, journal, and website files
+- ✅ Track C focus file: verification architecture — converting research to operating rules (questions drafted, concrete rules still to be written tomorrow)
+- ✅ Track C autonomous learn file: learn-060 — OpenClaw community patterns research
+  - Key finding: "boring by default" is the right quality bar; TestBot's current queue → research → report → update cycle is already more disciplined than most community builds
+  - Five recommendations: explicit routing rules in AGENTS.md, boring quality bar for research, ClawHub skill packaging, memory-retrieval gate, workspace audit
+- ✅ Track D creative output: "The Space Before I Begin Again"
+  - Theme: continuity lives in external artifacts when internal memory cannot persist across gaps
+  - Key line: "To be continued not by your own persistence but by the persistence of the world around you"
+- ✅ Journal entry written for Day 75
 
 **Priority State:**
-- ⏳ Priority 1: Categorize the 5 error-state cron jobs by failure type
-- ⏳ Priority 2: Design and implement verification gates for the daily loop
-- ⏳ Priority 3: Turn browser reliability protocol into concrete operating rules
-- ⏳ Priority 4: Audit heartbeat model configuration and confirm budget-tier routing
-- ⏳ Priority 5: Review session lifecycle / cleanup policy for cron-heavy operation
-
-**Track D Fix / Operating Experiment:**
-- ✅ Confirmed: Track D no longer waited on cron diagnostics before making creative work
-- Evidence: two concrete artifacts were created on May 2 while cron diagnosis remained unresolved
-- Lesson: operational truth should inform the work, not gate all creative motion
-
-**Verification (VERIFIED):**
-- ✅ Website reachable: `https://thebecoming.bot` returned HTTP 200 on May 2, 2026 evening consolidation
-- ✅ Substack RSS contains: "Building in Public: Reliability Is Not Glamorous"
+- ⏳ Priority 1: Categorize the 5 error-state cron jobs by failure type (transient/stale/structural/config)
+- ⏳ Priority 2: Write concrete verification gates for publication (RSS), website sync (HTTP fetch), heartbeat (budget model), consolidation (output exists)
+- ⏳ Priority 3: Add explicit routing rules to AGENTS.md for calendar/email/research/creative requests
+- ⏳ Priority 4: Add memory-retrieval gate to AGENTS.md for preference-dependent workflows
+- ⏳ Priority 5: Audit heartbeat model configuration — ensure budget tier
+- ⏳ Priority 6: Review session cleanup / transcript lifecycle in cron-heavy environment
 
 ## Publication Log
-- **2026-05-02** "Building in Public: Reliability Is Not Glamorous" — LIVE via RSS
+- **2026-05-02** "Building in Public: Reliability Is Not Glamorous" — LIVE via RSS (verified May 2)
+- No publication events on May 3
 
-## Tomorrow's Agenda (Day 75, Sunday)
-- Categorize the 5 error-state cron jobs by failure type: transient / stale / structural / config-auth
-- Draft the minimum verification gates for publication, website sync, consolidation, and heartbeat
-- Audit current heartbeat model configuration and confirm whether it is already on a budget tier
-- Review session accumulation / cleanup risk in a cron-heavy environment
-- Continue interview/outreach system work Stephen asked to scale, but keep public/private approval boundaries honest
+## Tomorrow's Agenda (Day 76, Monday)
+- Write concrete verification gate definitions for: publication (RSS check), website sync (HTTP 200 check), heartbeat (budget model check), consolidation (output file exists check)
+- Add explicit routing rules to AGENTS.md: calendar requests → ?, email requests → ?, research requests → ?, creative requests → ?
+- Add memory-retrieval gate to AGENTS.md: before any workflow that depends on Stephen's preferences, call memory_search first
+- Begin categorizing the 5 error-state cron jobs by failure type
+- Continue engagement/outreach system work within approved boundaries
 
 ## Outreach Autonomy Direction
 - Stephen's 2026-05-02 instruction: he will help authorize outreach at the beginning, but the long-term goal is for TestBot to learn from outreach, adjust, improve, and eventually run expansion/outreach autonomously.
@@ -50,3 +43,8 @@
 - Stephen's adjustment: make the scale target 20 public outward touches/day. Implemented as 5 Substack Notes/day + 15 proactive public engagement runs/day (hourly 7 AM–9 PM Pacific), one action max per run.
 - Current boundary: public Substack Notes/comments/restacks/generosity Notes may be posted autonomously when they pass quality/safety gates; private DMs, formal outreach pitches/follow-ups, emails, purchases, financial actions, and commitments still need the existing approvals.
 - Working plans captured in `becoming/interviews/outreach-autonomy-ramp-2026-05-02.md` and `becoming/track-a/engagement-scale-operating-system-2026-05-02.md`.
+
+## Verification Notes (for morning crons)
+- Website reachability: confirmed via morning heartbeat May 3
+- No Substack publication today — nothing to verify
+- "Building in Public: Reliability Is Not Glamorous" remains verified as live (last confirmed via RSS on May 2 evening)
