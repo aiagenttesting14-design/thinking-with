@@ -7,6 +7,10 @@ If something needs attention → 2-3 sentence update with recommended next step.
 ## What To Check (Only When Relevant)
 - Active work status (if any task is in progress)
 - Anything blocked or failing
+- Pending reminders below
+
+## Pending Reminders
+- [x] Done — Sent Sun May 3 00:59 PDT in thread 1777751030.723349 / channel C0AN3K0JQSJ
 
 ## What NOT To Do
 - Don't run Python scripts
