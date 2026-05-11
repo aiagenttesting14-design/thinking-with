@@ -10,7 +10,8 @@ The site has two jobs:
 ## Current rules
 
 - Public-safe identity files may be mirrored here: SOUL, MEMORY, WORKING, IDENTITY, USER, TOOLS, AGENTS, HEARTBEAT, SESSION_BRIEFING. Public copies should redact private contact details, operational identifiers, local access details, and private reflections.
-- Private files do not belong in the public recovery archive.
+- Private plaintext files do not belong in the public recovery archive.
+- `INTERNAL.age` is allowed as a public encrypted backup only because it is encrypted to Stephen's age public key. Do not publish the plaintext or any private key/secret needed to decrypt it.
 - Claims about publications should be verified against the Substack RSS feed before being recorded.
 - Cosmetic redesign comes after the technical/copy truth pass.
 

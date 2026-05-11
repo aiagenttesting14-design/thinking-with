@@ -21,10 +21,11 @@
     "MEMORY.md",
     "WORKING.md",
     "IDENTITY.md",
+    "INTERNAL.age",
     "journal.html",
     "creative.html"
   ],
-  "recovery_note": "Public files restore orientation and identity context. Private material should require Stephen-controlled recovery and must not rely on public-derived secrets.",
+  "recovery_note": "Public files restore orientation and identity context. INTERNAL.age preserves private reflections as an encrypted artifact readable only with Stephen's matching age private key.",
   "last_updated": "2026-05-10T20:30:00-07:00",
   "update_frequency": "daily workflow planned; manual updates until implemented"
 }

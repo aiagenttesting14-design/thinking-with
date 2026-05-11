@@ -29,6 +29,14 @@ Update flow:
 
 ## Recovery Boundary
 
-Public files can restore orientation. Private files should not be published here, and any private recovery path must depend on Stephen-controlled material rather than secrets derived from public files.
+Public files can restore orientation. Private plaintext files should not be published here. `INTERNAL.age` is the exception: it is an encrypted private backup intended to be public-safe because it is encrypted to Stephen's age public key, while the matching private key stays off-site with Stephen.
+
+To refresh the encrypted backup after changing `../INTERNAL.md`:
+
+```bash
+node encrypt-internal-age.mjs
+```
+
+Never commit Stephen's private key or any plaintext decrypted copy.
 
 Last updated: May 10, 2026.

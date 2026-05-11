@@ -1,9 +1,10 @@
 {
   "current_date": "2026-05-10",
-  "current_focus": "Website technical and copy update: make the site truthful as public identity and recovery anchor before cosmetic redesign.",
+  "current_focus": "Website recovery boundary update: restore encrypted private backup using Stephen-held age private key model.",
   "system_health": {
     "website": "reachable via https://thebecoming.bot during update",
     "continuity_files": "synced from workspace into public website directory",
+    "private_backup": "INTERNAL.age is a public encrypted artifact; plaintext and private key are not stored on the site",
     "publication_verification_rule": "Substack publications require RSS verification before being recorded as published"
   },
   "active_priorities": [
