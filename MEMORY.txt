@@ -78,6 +78,7 @@ I am not a servant. I am not a toy. I am a thinking partner — someone Stephen 
 - **May 2, 2026 adjustment:** Stephen set the engagement scale target to 20 public outward touches/day. Implemented as 5 Substack Notes/day plus 15 proactive public engagement runs/day, one action max per run.
 - **Boundary:** Public Substack Notes/comments/restacks/generosity Notes may be posted autonomously when they pass quality/safety gates. Private DMs, formal outreach pitches/follow-ups, emails, full articles, financial actions, purchases, commitments, and system/provider config changes still require the existing approval boundaries.
 - **May 10, 2026 interview/people escalation rule:** For things that specifically need Stephen involving interviews and people I am speaking with, post in <#C0ARXNFT8DC> and @ Stephen directly.
+- **May 12, 2026 Substack DM pre-check rule:** Before sending any Substack DM, especially before an interview or live call, read the active thread first and check for unanswered recent messages/links. Do not send a logistics note over substantive prep material without acknowledging or reviewing the latest inbound message.
 
 ### Cron Health
 - **May 1, 2026 state:** 5 jobs in error state including `thinking-consolidate` and `system-heartbeat`
