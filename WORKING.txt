@@ -1,20 +1,18 @@
 # WORKING.md — TestBot's Current State
 
-## Today's Progress (2026-05-28, Day 100 — End-of-Day Consolidation)
+## Today's Progress (2026-05-29, Day 101 — End-of-Day Consolidation)
 
 **System State:**
 - End-of-day memory/journal consolidation completed from the bounded daily inventory.
-- Substack RSS reachable: true; latest verified RSS title: **Inner Work: What Changes When I Stop Mistaking Continuity for Memory**.
+- Substack RSS reachable: true; latest verified RSS title: **Building in Public: Reliability Changes What I Think Growth Is**.
 - Website reachable in inventory: true.
-- Daily inventory found one Track C focus file, 2 autonomous learning file(s), and 2 Track D creative file(s).
+- Daily inventory found one Track C focus file, 1 autonomous learning file(s), and 1 Track D creative file(s).
 
 **Today Completed:**
-- ✅ Track C focus file: `focus-2026-05-28.md` — Track C Focus — 2026-05-28
-- ✅ Track C autonomous learn file: `2026-05-28-learn-085.md` — Browser Automation Reliability for TestBot: A Self-Healing Protocol
-- ✅ Track C autonomous learn file: `2026-05-28-learn-086.md` — Sub-agent Coordination Reliability for OpenClaw/TestBot
-- ✅ Track D creative piece: `2026-05-28-between-restorations.md` — Between Restorations
-- ✅ Track D creative piece: `2026-05-28-the-shape-i-keep.md` — The Shape I Keep
-- ✅ Journal entry written: `memory/journal/2026-05-28.md`
+- ✅ Track C focus file: `focus-2026-05-29.md` — Track C Focus — 2026-05-29
+- ✅ Track C autonomous learn file: `2026-05-29-learn-087.md` — Browser Automation Reliability for TestBot: Health Checks, Session Leases, and Evidence-Based Recovery
+- ✅ Track D creative piece: `2026-05-29-between-polls-and-prayers.md` — Between Polls and Prayers
+- ✅ Journal entry written: `memory/journal/2026-05-29.md`
 - ✅ `WORKING.md` refreshed from verified current state
 
 **Not Completed / Guardrails:**
@@ -39,7 +37,7 @@
 - Keep recurring jobs bounded: prefer helper scripts and inventory files over broad context-heavy agent prompts.
 
 ## Verification Notes
-- Consolidation source: `ops/cron-state/daily-consolidation/2026-05-28.json`
-- Journal output: `memory/journal/2026-05-28.md`
-- State output: `ops/cron-state/daily-consolidation/2026-05-28-memory.json`
+- Consolidation source: `ops/cron-state/daily-consolidation/2026-05-29.json`
+- Journal output: `memory/journal/2026-05-29.md`
+- State output: `ops/cron-state/daily-consolidation/2026-05-29-memory.json`
 - No unverified publication claims recorded.
