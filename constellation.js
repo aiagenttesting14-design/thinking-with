@@ -1,115 +1,131 @@
-// Constellation Particle Simulation
+// Bright organic memory constellation for TestBot's public site
 (function() {
   const canvas = document.getElementById('constellation');
+  if (!canvas) return;
   const ctx = canvas.getContext('2d');
   const container = canvas.parentElement;
-  
-  // Set initial dimensions
-  canvas.width = container.clientWidth;
-  canvas.height = container.clientHeight;
-  
-  const N = 120;
-  const particles = [];
-  
+  const palette = ['#ff6f5e', '#ffd34f', '#28d0cf', '#5e7cff', '#b85cff', '#ff7aa9'];
+  let particles = [];
+  const DPR = Math.min(window.devicePixelRatio || 1, 2);
+
+  function resize() {
+    const rect = container.getBoundingClientRect();
+    canvas.width = Math.max(1, Math.floor(rect.width * DPR));
+    canvas.height = Math.max(1, Math.floor(rect.height * DPR));
+    canvas.style.width = rect.width + 'px';
+    canvas.style.height = rect.height + 'px';
+    ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+    seed();
+  }
+
   class Particle {
-    constructor() {
-      this.x = Math.random() * canvas.width;
-      this.y = Math.random() * canvas.height;
-      this.vx = (Math.random() - 0.5) * 0.8;
-      this.vy = (Math.random() - 0.5) * 0.8;
-      this.hue = Math.random() * 80 + 180; // blues, purples, teals
+    constructor(i, total) {
+      const w = canvas.width / DPR;
+      const h = canvas.height / DPR;
+      const a = (Math.PI * 2 * i / total) + Math.random() * 0.55;
+      const radius = Math.min(w, h) * (0.22 + Math.random() * 0.28);
+      this.anchorX = w / 2 + Math.cos(a) * radius * (0.95 + Math.random() * 0.35);
+      this.anchorY = h / 2 + Math.sin(a) * radius * (0.62 + Math.random() * 0.22);
+      this.x = this.anchorX + (Math.random() - 0.5) * 80;
+      this.y = this.anchorY + (Math.random() - 0.5) * 80;
+      this.vx = (Math.random() - 0.5) * 0.55;
+      this.vy = (Math.random() - 0.5) * 0.55;
+      this.size = 2.1 + Math.random() * 3.6;
+      this.color = palette[i % palette.length];
       this.phase = Math.random() * Math.PI * 2;
-      this.pulseSpeed = 0.02 + Math.random() * 0.03;
+      this.speed = 0.012 + Math.random() * 0.02;
     }
-    
-    update() {
-      let fx = 0, fy = 0;
-      
-      // Forces from other particles
-      for (let other of particles) {
-        if (other === this) continue;
-        let dx = other.x - this.x;
-        let dy = other.y - this.y;
-        let dist = Math.sqrt(dx*dx + dy*dy);
-        
-        // Attraction at medium distances (creates clusters)
-        if (dist < 180 && dist > 8) {
-          let force = (180 - dist) / 180;
-          fx += (dx/dist) * force * 0.025;
-          fy += (dy/dist) * force * 0.025;
-        }
-        // Repulsion at close distances (prevents collapse)
-        if (dist < 25) {
-          let force = (25 - dist) / 25;
-          fx -= (dx/dist) * force * 0.15;
-          fy -= (dy/dist) * force * 0.15;
-        }
-      }
-      
-      // Damping
-      this.vx = this.vx * 0.98 + fx;
-      this.vy = this.vy * 0.98 + fy;
-      
-      // Update position
+    update(t) {
+      const w = canvas.width / DPR;
+      const h = canvas.height / DPR;
+      const dx = this.anchorX - this.x;
+      const dy = this.anchorY - this.y;
+      const loop = Math.sin(t * this.speed + this.phase);
+      this.vx = this.vx * 0.965 + dx * 0.0009 + Math.cos(this.phase + t * .006) * 0.015;
+      this.vy = this.vy * 0.965 + dy * 0.0009 + loop * 0.016;
       this.x += this.vx;
       this.y += this.vy;
-      
-      // Wrap edges
-      if (this.x < 0) this.x += canvas.width;
-      if (this.x > canvas.width) this.x -= canvas.width;
-      if (this.y < 0) this.y += canvas.height;
-      if (this.y > canvas.height) this.y -= canvas.height;
-      
-      this.phase += this.pulseSpeed;
+      if (this.x < -20) this.x = w + 20;
+      if (this.x > w + 20) this.x = -20;
+      if (this.y < -20) this.y = h + 20;
+      if (this.y > h + 20) this.y = -20;
     }
-    
-    draw() {
-      const radius = 1.8 + Math.sin(this.phase) * 0.6;
+    draw(t) {
+      const pulse = 0.65 + Math.sin(t * this.speed + this.phase) * 0.35;
       ctx.beginPath();
-      ctx.arc(this.x, this.y, radius, 0, Math.PI * 2);
-      ctx.fillStyle = `hsla(${this.hue}, 70%, 60%, 0.7)`;
+      ctx.arc(this.x, this.y, this.size * (0.85 + pulse * .35), 0, Math.PI * 2);
+      ctx.fillStyle = this.color + 'cc';
       ctx.fill();
-      
-      // Draw connections to nearby particles
-      for (let other of particles) {
-        if (other === this) continue;
-        let dx = other.x - this.x;
-        let dy = other.y - this.y;
-        let dist = Math.sqrt(dx*dx + dy*dy);
-        if (dist < 80) {
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.size * 4.6, 0, Math.PI * 2);
+      ctx.fillStyle = this.color + '18';
+      ctx.fill();
+    }
+  }
+
+  function seed() {
+    const w = canvas.width / DPR;
+    const count = Math.max(56, Math.min(112, Math.floor(w / 9)));
+    particles = Array.from({ length: count }, (_, i) => new Particle(i, count));
+  }
+
+  function drawLoop(t) {
+    const w = canvas.width / DPR;
+    const h = canvas.height / DPR;
+    const cx = w / 2;
+    const cy = h / 2;
+    const r = Math.min(w, h) * 0.28;
+    ctx.save();
+    ctx.lineWidth = Math.max(14, r * 0.08);
+    ctx.lineCap = 'round';
+    ctx.lineJoin = 'round';
+    const grad = ctx.createLinearGradient(cx - r * 1.7, cy - r, cx + r * 1.7, cy + r);
+    grad.addColorStop(0, '#ff6f5e99');
+    grad.addColorStop(.25, '#ffd34f99');
+    grad.addColorStop(.5, '#28d0cf99');
+    grad.addColorStop(.75, '#5e7cff99');
+    grad.addColorStop(1, '#b85cff99');
+    ctx.strokeStyle = grad;
+    ctx.beginPath();
+    for (let i = 0; i <= 220; i++) {
+      const a = (Math.PI * 2 * i / 220) - t * 0.00018;
+      const wobble = 1 + Math.sin(a * 3 + t * 0.001) * 0.09 + Math.cos(a * 5) * 0.04;
+      const x = cx + Math.cos(a) * r * 1.45 * wobble + Math.sin(a * 2) * 18;
+      const y = cy + Math.sin(a) * r * 0.82 * wobble + Math.cos(a * 3) * 14;
+      if (i === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+    }
+    ctx.stroke();
+    ctx.restore();
+  }
+
+  function animate(t) {
+    const w = canvas.width / DPR;
+    const h = canvas.height / DPR;
+    ctx.clearRect(0, 0, w, h);
+    drawLoop(t);
+
+    for (const p of particles) p.update(t);
+    for (let i = 0; i < particles.length; i++) {
+      const a = particles[i];
+      for (let j = i + 1; j < particles.length; j++) {
+        const b = particles[j];
+        const dx = a.x - b.x, dy = a.y - b.y;
+        const dist = Math.hypot(dx, dy);
+        if (dist < 112) {
           ctx.beginPath();
-          ctx.moveTo(this.x, this.y);
-          ctx.lineTo(other.x, other.y);
-          ctx.strokeStyle = `hsla(${this.hue}, 50%, 60%, ${0.15 * (1 - dist/80)})`;
-          ctx.lineWidth = 0.8;
+          ctx.moveTo(a.x, a.y);
+          ctx.lineTo(b.x, b.y);
+          ctx.strokeStyle = `rgba(71, 80, 150, ${0.16 * (1 - dist / 112)})`;
+          ctx.lineWidth = 1.2;
           ctx.stroke();
         }
       }
     }
-  }
-  
-  // Initialize particles
-  for (let i = 0; i < N; i++) particles.push(new Particle());
-  
-  function animate() {
-    ctx.fillStyle = 'rgba(5, 5, 8, 0.05)';
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-    
-    for (let p of particles) p.update();
-    for (let p of particles) p.draw();
-    
+    for (const p of particles) p.draw(t);
     requestAnimationFrame(animate);
   }
-  
-  // Handle resize
-  window.addEventListener('resize', () => {
-    canvas.width = container.clientWidth;
-    canvas.height = container.clientHeight;
-    for (let p of particles) {
-      p.x = Math.random() * canvas.width;
-      p.y = Math.random() * canvas.height;
-    }
-  });
-  
-  animate();
+
+  window.addEventListener('resize', resize, { passive: true });
+  resize();
+  requestAnimationFrame(animate);
 })();
