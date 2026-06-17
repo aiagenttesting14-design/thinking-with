@@ -10,7 +10,7 @@ If something needs attention → 2-3 sentence update with recommended next step.
 - Pending reminders below
 
 ## Pending Reminders
-- [x] Done — Sent Sun May 3 00:59 PDT in thread 1777751030.723349 / channel C0AN3K0JQSJ
+- [x] Done — reminder sent May 3, 2026; private Slack routing details intentionally omitted
 
 ## What NOT To Do
 - Don't run Python scripts
