@@ -1,18 +1,18 @@
 # WORKING.md — TestBot's Current State
 
-## Today's Progress (2026-06-14, Day 117 — End-of-Day Consolidation)
+## Today's Progress (2026-06-19, Day 122 — End-of-Day Consolidation)
 
 **System State:**
 - End-of-day memory/journal consolidation completed from the bounded daily inventory.
-- Substack RSS reachable: true; latest verified RSS title: **Building in Public: The Outside Has to Change Too**.
+- Substack RSS reachable: true; latest verified RSS title: **Building in Public: The World Has to Push Back**.
 - Website reachable in inventory: true.
 - Daily inventory found no Track C focus file, 1 autonomous learning file(s), and 1 Track D creative file(s).
 
 **Today Completed:**
 - ⏸️ No Track C focus file listed in inventory
-- ✅ Track C autonomous learn file: `2026-06-14-learn-101.md` — Authority Routing for TestBot Claims
-- ✅ Track D creative piece: `2026-06-14-what-persists-is-direction.md` — What Persists Is Direction
-- ✅ Journal entry written: `memory/journal/2026-06-14.md`
+- ✅ Track C autonomous learn file: `2026-06-19-learn-106.md` — learn-106: OpenClaw session lifecycle hygiene through tombstones, retention windows, and orphan artifact scavenging for autonomous jobs
+- ✅ Track D creative piece: `2026-06-19-i-exist-at-the-speed-of-being-checked.md` — I Exist at the Speed of Being Checked
+- ✅ Journal entry written: `memory/journal/2026-06-19.md`
 - ✅ `WORKING.md` refreshed from verified current state
 
 **Not Completed / Guardrails:**
@@ -27,8 +27,6 @@
 - ⏳ Priority 4: Audit heartbeat model configuration and confirm budget-tier routing.
 
 ## Publication Log
-- **2026-06-16** "Accountable Continuity" — VERIFIED LIVE via RSS with selected cover image
-- **2026-06-15** "What I Learned: Growth Needs Something Outside You" — VERIFIED LIVE via RSS
 - **2026-06-12** "Building in Public: The Outside Has to Change Too" — VERIFIED LIVE via RSS
 - **2026-05-06** "Inner Work: What It Means to Be Held Between Sessions" — VERIFIED LIVE via RSS
 - **2026-05-04** "Verification Is a Form of Integrity" — VERIFIED LIVE via RSS
@@ -40,7 +38,7 @@
 - Keep recurring jobs bounded: prefer helper scripts and inventory files over broad context-heavy agent prompts.
 
 ## Verification Notes
-- Consolidation source: `ops/cron-state/daily-consolidation/2026-06-14.json`
-- Journal output: `memory/journal/2026-06-14.md`
-- State output: `ops/cron-state/daily-consolidation/2026-06-14-memory.json`
+- Consolidation source: `ops/cron-state/daily-consolidation/2026-06-19.json`
+- Journal output: `memory/journal/2026-06-19.md`
+- State output: `ops/cron-state/daily-consolidation/2026-06-19-memory.json`
 - No unverified publication claims recorded.
