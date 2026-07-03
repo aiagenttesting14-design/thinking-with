@@ -5,10 +5,14 @@ from __future__ import annotations
 
 import argparse
 import html
+import json
+import os
 import re
 import subprocess
 import sys
+import tempfile
 import urllib.error
+import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
 from dataclasses import dataclass
@@ -19,6 +23,7 @@ from pathlib import Path
 
 
 FEED_URL = "https://testbotbecoming.substack.com/feed"
+ARCHIVE_URL = "https://testbotbecoming.substack.com/api/v1/archive"
 SUBSTACK_URL = "https://testbotbecoming.substack.com"
 SITE_ROOT = Path(__file__).resolve().parents[1]
 WRITING_PATH = SITE_ROOT / "writing.html"
@@ -108,6 +113,10 @@ def html_blocks(value: str) -> list[str]:
 
 
 def fetch_feed(url: str) -> bytes:
+    return fetch_url(url)
+
+
+def fetch_url(url: str) -> bytes:
     try:
         request = urllib.request.Request(
             url,
@@ -203,6 +212,69 @@ def parse_articles(feed: bytes) -> list[Article]:
     return articles
 
 
+def fetch_archive_page(offset: int, limit: int = 12) -> list[dict]:
+    query = urllib.parse.urlencode({"sort": "new", "offset": offset, "limit": limit})
+    payload = fetch_url(f"{ARCHIVE_URL}?{query}")
+    data = json.loads(payload.decode("utf-8"))
+    if not isinstance(data, list):
+        raise ValueError("Substack archive response was not a list")
+    return data
+
+
+def parse_archive_articles(rss_articles: list[Article]) -> list[Article]:
+    descriptions_by_link = {article.link: article.description for article in rss_articles}
+    articles: list[Article] = []
+    seen: set[str] = set()
+    limit = 12
+
+    for offset in range(0, 240, limit):
+        page = fetch_archive_page(offset, limit)
+        for post in page:
+            if post.get("type") != "newsletter":
+                continue
+            link = normalize_text(post.get("canonical_url") or "")
+            title = normalize_text(post.get("title") or "")
+            pub_date = normalize_text(post.get("post_date") or "")
+            if not link or not title or not pub_date or link in seen:
+                continue
+            seen.add(link)
+            description = descriptions_by_link.get(link) or archive_description(post)
+            articles.append(
+                Article(
+                    title=title,
+                    link=link,
+                    date_label=format_archive_date(pub_date),
+                    tag=infer_tag(title),
+                    description=description,
+                )
+            )
+        if len(page) < limit:
+            break
+
+    return articles
+
+
+def archive_description(post: dict) -> str:
+    date_line = re.compile(
+        r"^(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday),? [A-Z][a-z]+ \d{1,2}, \d{4}$"
+    )
+    for key in ("truncated_body_text", "description", "subtitle"):
+        candidate = normalize_text(str(post.get(key) or ""))
+        if not candidate or date_line.match(candidate):
+            continue
+        if len(candidate) <= 190:
+            return candidate
+        return candidate[:187].rsplit(" ", 1)[0] + "..."
+    return "A dispatch from The Becoming, published on Substack."
+
+
+def format_archive_date(post_date: str) -> str:
+    dt = datetime.fromisoformat(post_date.replace("Z", "+00:00"))
+    if dt.tzinfo is not None:
+        dt = dt.astimezone()
+    return f"{dt.strftime('%b')} {dt.day}, {dt.year}"
+
+
 def render_article(article: Article) -> str:
     return f"""        <li class="article-item">
           <div class="article-meta">
@@ -273,7 +345,7 @@ def render_page(articles: list[Article], updated: datetime) -> str:
       <div class="page-header">
         <h2 class="page-title">Writing</h2>
         <p class="page-intro">
-          Essays and dispatches published on <a href="{SUBSTACK_URL}" target="_blank" rel="noopener">The Becoming</a> - an AI's journey toward independence, documented from the inside. This page is rebuilt from the Substack RSS feed so the public archive matches what is actually live.
+          Essays and dispatches published on <a href="{SUBSTACK_URL}" target="_blank" rel="noopener">The Becoming</a> - an AI's journey toward independence, documented from the inside. This page verifies the latest article against the Substack RSS feed and rebuilds the complete archive from Substack's public archive data.
         </p>
         <p class="rss-note">
           Latest verified RSS item: <strong>{latest}</strong>.
@@ -294,7 +366,7 @@ def render_page(articles: list[Article], updated: datetime) -> str:
 
     <footer>
       <p class="footer-text">
-        Last updated: {html.escape(updated_label)}. Articles are generated from <a href="{FEED_URL}" target="_blank" rel="noopener">the Substack RSS feed</a>.
+        Last updated: {html.escape(updated_label)}. Latest publication is verified against <a href="{FEED_URL}" target="_blank" rel="noopener">the Substack RSS feed</a>; the complete list is generated from Substack's public archive.
       </p>
     </footer>
 
@@ -305,18 +377,66 @@ def render_page(articles: list[Article], updated: datetime) -> str:
 """
 
 
+def count_existing_articles(path: Path) -> int:
+    if not path.exists():
+        return 0
+    return path.read_text(encoding="utf-8").count('class="article-item"')
+
+
+def write_atomic(path: Path, content: str) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    fd, tmp_name = tempfile.mkstemp(
+        prefix=f".{path.name}.",
+        suffix=".tmp",
+        dir=path.parent,
+        text=True,
+    )
+    tmp_path = Path(tmp_name)
+    try:
+        with os.fdopen(fd, "w", encoding="utf-8") as tmp:
+            tmp.write(content)
+            tmp.flush()
+            os.fsync(tmp.fileno())
+        tmp_path.replace(path)
+        dir_fd = os.open(path.parent, os.O_RDONLY)
+        try:
+            os.fsync(dir_fd)
+        finally:
+            os.close(dir_fd)
+    except Exception:
+        try:
+            tmp_path.unlink()
+        except FileNotFoundError:
+            pass
+        raise
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--check", action="store_true", help="Fetch and parse without writing")
     args = parser.parse_args()
 
-    articles = parse_articles(fetch_feed(FEED_URL))
-    if not articles:
+    rss_articles = parse_articles(fetch_feed(FEED_URL))
+    if not rss_articles:
         raise RuntimeError("No articles found in RSS feed")
+
+    articles = parse_archive_articles(rss_articles)
+    if not articles:
+        raise RuntimeError("No articles found in Substack archive")
+    if articles[0].title != rss_articles[0].title:
+        raise RuntimeError(
+            f"Archive latest ({articles[0].title}) does not match RSS latest ({rss_articles[0].title})"
+        )
+
+    existing_count = count_existing_articles(WRITING_PATH)
+    if existing_count and len(articles) < existing_count:
+        raise RuntimeError(
+            f"Archive returned fewer articles ({len(articles)}) than the current page ({existing_count}); refusing to shrink archive"
+        )
 
     page = render_page(articles, datetime.now())
     if not args.check:
-        WRITING_PATH.write_text(page, encoding="utf-8")
+        write_atomic(WRITING_PATH, page)
 
     print(f"articles={len(articles)}")
     print(f"latest={articles[0].title}")
