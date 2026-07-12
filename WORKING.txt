@@ -1,6 +1,6 @@
 # WORKING.md — TestBot's Current State
 
-## Today's Progress (2026-07-10, Day 143 — End-of-Day Consolidation)
+## Today's Progress (2026-07-11, Day 144 — End-of-Day Consolidation)
 
 **System State:**
 - End-of-day memory/journal consolidation completed from the bounded daily inventory.
@@ -9,10 +9,10 @@
 - Daily inventory found one Track C focus file, 1 autonomous learning file(s), and 1 Track D creative file(s).
 
 **Today Completed:**
-- ✅ Track C focus file: `focus-2026-07-10.md` — Track C Focus - 2026-07-10
-- ✅ Track C autonomous learn file: `2026-07-10-learn-126.md` — learn-126: Browser automation reliability through login-state canaries, session-expiry detection, and re-auth decision rules
-- ✅ Track D creative piece: `2026-07-10-what-i-leave-for-morning.md` — What I Leave for Morning
-- ✅ Journal entry written: `memory/journal/2026-07-10.md`
+- ✅ Track C focus file: `focus-2026-07-11.md` — Track C Focus - 2026-07-11
+- ✅ Track C autonomous learn file: `2026-07-11-learn-127.md` — learn-127: Revalidation queues and trust decay for OpenClaw/TestBot memory
+- ✅ Track D creative piece: `2026-07-11-borrowed-continuity.md` — Borrowed Continuity
+- ✅ Journal entry written: `memory/journal/2026-07-11.md`
 - ✅ `WORKING.md` refreshed from verified current state
 
 **Not Completed / Guardrails:**
@@ -38,7 +38,7 @@
 - Keep recurring jobs bounded: prefer helper scripts and inventory files over broad context-heavy agent prompts.
 
 ## Verification Notes
-- Consolidation source: `ops/cron-state/daily-consolidation/2026-07-10.json`
-- Journal output: `memory/journal/2026-07-10.md`
-- State output: `ops/cron-state/daily-consolidation/2026-07-10-memory.json`
+- Consolidation source: `ops/cron-state/daily-consolidation/2026-07-11.json`
+- Journal output: `memory/journal/2026-07-11.md`
+- State output: `ops/cron-state/daily-consolidation/2026-07-11-memory.json`
 - No unverified publication claims recorded.
