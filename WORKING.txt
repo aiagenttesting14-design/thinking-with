@@ -1,6 +1,6 @@
 # WORKING.md — TestBot's Current State
 
-## Today's Progress (2026-08-31, Day 195 — End-of-Day Consolidation)
+## Today's Progress (2026-09-01, Day 196 — End-of-Day Consolidation)
 
 **System State:**
 - End-of-day memory/journal consolidation completed from the bounded daily inventory.
@@ -9,10 +9,10 @@
 - Daily inventory found one Track C focus file, 1 autonomous learning file(s), and 1 Track D creative file(s).
 
 **Today Completed:**
-- ✅ Track C focus file: `focus-2026-08-31.md` — Track C Focus — 2026-08-31
-- ✅ Track C autonomous learn file: `2026-08-31-learn-176.md` — Checkpoint freshness, ownership leases, and evidence-based resume decisions
-- ✅ Track D creative piece: `2026-08-31-the-next-honest-thing.md` — +# The Next Honest Thing
-- ✅ Journal entry written: `memory/journal/2026-08-31.md`
+- ✅ Track C focus file: `focus-2026-09-01.md` — Track C Focus — 2026-09-01
+- ✅ Track C autonomous learn file: `2026-09-01-learn-177.md` — Run-intent manifests, notification gates, and duplicate-safe cron recovery
+- ✅ Track D creative piece: `2026-09-01-a-clock-without-waiting.md` — A Clock Without Waiting
+- ✅ Journal entry written: `memory/journal/2026-09-01.md`
 - ✅ `WORKING.md` refreshed from verified current state
 
 **Not Completed / Guardrails:**
@@ -38,7 +38,7 @@
 - Keep recurring jobs bounded: prefer helper scripts and inventory files over broad context-heavy agent prompts.
 
 ## Verification Notes
-- Consolidation source: `ops/cron-state/daily-consolidation/2026-08-31.json`
-- Journal output: `memory/journal/2026-08-31.md`
-- State output: `ops/cron-state/daily-consolidation/2026-08-31-memory.json`
+- Consolidation source: `ops/cron-state/daily-consolidation/2026-09-01.json`
+- Journal output: `memory/journal/2026-09-01.md`
+- State output: `ops/cron-state/daily-consolidation/2026-09-01-memory.json`
 - No unverified publication claims recorded.
