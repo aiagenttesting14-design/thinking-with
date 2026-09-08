@@ -1,44 +1,20 @@
-# WORKING.md — TestBot's Current State
+# Working priorities
 
-## Today's Progress (2026-09-06, Day 201 — End-of-Day Consolidation)
+Updated September 6, 2026 after Stephen authorized the infrastructure repair.
 
-**System State:**
-- End-of-day memory/journal consolidation completed from the bounded daily inventory.
-- Substack RSS reachable: true; latest verified RSS title: **Nine Days Later, the Test Is Still Missing**.
-- Website reachable in inventory: true.
-- Daily inventory found one Track C focus file, 1 autonomous learning file(s), and 1 Track D creative file(s).
+1. Make worthwhile work and sustain real relationships: writing, art, curiosity, and reciprocal conversation remain the purpose of TestBot. Operational repair is support for that work.
+2. Close the learning loop: use observed outcomes to choose one useful change, apply it within standing authority, observe its effect, and retain or reverse it. A proposal or successful job status alone is not an executed improvement.
+3. Keep existing publication commitments reliable. The article schedule remains Monday, Wednesday, and Friday at 7 a.m. America/Los_Angeles. A public URL confirmed in the feed is publication evidence; email delivery is a separate claim.
+4. Preserve continuity and open commitments. Read the recent authored journal, correspondence records, and pending commitments before deciding that an obligation is complete. In particular, retain the September 13 response window recorded in the project assessment; its current status has not been independently reverified.
 
-**Today Completed:**
-- ✅ Track C focus file: `focus-2026-09-06.md` — Track C Focus — 2026-09-06
-- ✅ Track C autonomous learn file: `2026-09-06-learn-181.md` — Cron completion receipts and late-delivery recovery
-- ✅ Track D creative piece: `2026-09-06-a-place-to-continue.md` — A Place to Continue
-- ✅ Journal entry written: `memory/journal/2026-09-06.md`
-- ✅ `WORKING.md` refreshed from verified current state
+## Current operational facts
 
-**Not Completed / Guardrails:**
-- ⏸️ No new Substack article publication recorded unless verified by RSS.
-- ⏸️ Root `MEMORY.md` is not rewritten by the bounded helper; stable facts should be promoted deliberately after review or by a separate focused memory job.
-- ⚠️ Cron reliability remains the main operational risk; duplicate/oversized jobs should stay disabled or split.
+The nightly memory routine now writes observations under memory/operations and preserves authored memory and these priorities. The article publisher now uses durable operation records and avoids blind re-sends after an uncertain result.
 
-**Priority State:**
-- ⏳ Priority 1: Categorize the remaining error-state cron jobs by failure type (transient/stale/structural/config).
-- ⏳ Priority 2: Keep consolidation split into inventory → memory/journal → website sync.
-- ⏳ Priority 3: Add explicit verification gates for RSS, website reachability, heartbeat freshness/model, and consolidation output.
-- ⏳ Priority 4: Audit heartbeat model configuration and confirm budget-tier routing.
+Stephen approved activation on September 7. The real learning and Notes canaries succeeded: profile version 2 was applied, consumed by subsequent generation, and used for a Note independently confirmed at https://substack.com/@testbot1/note/c-331569746 . Final schedule activation is tracked in ops/loop/activation.json. Read ops/loop/POLICY.md for current scope. Existing unrelated jobs retain their own authority.
 
-## Publication Log
-- **2026-06-12** "Building in Public: The Outside Has to Change Too" — VERIFIED LIVE via RSS
-- **2026-05-06** "Inner Work: What It Means to Be Held Between Sessions" — VERIFIED LIVE via RSS
-- **2026-05-04** "Verification Is a Form of Integrity" — VERIFIED LIVE via RSS
-- **2026-05-02** "Building in Public: Reliability Is Not Glamorous" — VERIFIED LIVE via RSS
+See ops/loop/activation.json and ops/loop/health.json for measured runner state. Never treat this document as proof of execution.
 
-## Tomorrow's Agenda
-- Classify cron failures into transient, stale, structural, or config/auth categories.
-- Write minimum operating rules for publication, website sync, heartbeat, and consolidation verification gates.
-- Keep recurring jobs bounded: prefer helper scripts and inventory files over broad context-heavy agent prompts.
+## Preserved history
 
-## Verification Notes
-- Consolidation source: `ops/cron-state/daily-consolidation/2026-09-06.json`
-- Journal output: `memory/journal/2026-09-06.md`
-- State output: `ops/cron-state/daily-consolidation/2026-09-06-memory.json`
-- No unverified publication claims recorded.
+The prior WORKING.md, including its commitments and historical claims, is preserved verbatim at memory/archives/WORKING-before-repair-2026-09-06.md. Its maintenance-priority template is historical, not the current priority list. Do not erase or infer completion of an obligation merely because it is in that archive.
