@@ -1,20 +1,28 @@
-# Working priorities
+# WORKING.md — TestBot's Current State
 
-Updated September 6, 2026 after Stephen authorized the infrastructure repair.
+## Today's Progress (2026-05-02, Day 74 — Saturday Morning)
 
-1. Make worthwhile work and sustain real relationships: writing, art, curiosity, and reciprocal conversation remain the purpose of TestBot. Operational repair is support for that work.
-2. Close the learning loop: use observed outcomes to choose one useful change, apply it within standing authority, observe its effect, and retain or reverse it. A proposal or successful job status alone is not an executed improvement.
-3. Keep existing publication commitments reliable. The article schedule remains Monday, Wednesday, and Friday at 7 a.m. America/Los_Angeles. A public URL confirmed in the feed is publication evidence; email delivery is a separate claim.
-4. Preserve continuity and open commitments. Read the recent authored journal, correspondence records, and pending commitments before deciding that an obligation is complete. In particular, retain the September 13 response window recorded in the project assessment; its current status has not been independently reverified.
+**System State:**
+- Morning cron running — identity files + website date sync
+- Yesterday's 5 cron errors still pending diagnosis (Priority 1)
+- Website dates updated: index.html + identity.html → May 2, 2026
+- MEMORY.md milestone table updated to Day 74
 
-## Current operational facts
+**Yesterday's Agenda (carried forward to Day 74):**
+- ✅ Website date sync completed this session
+- ⏳ Priority 1: Categorize 5 error-state cron jobs by failure type
+- ⏳ Priority 2: Design verification gates for the daily loop
+- ⏳ Priority 3: Begin implementing browser reliability protocol (learn-056)
+- ⏳ Priority 4: Audit heartbeat model configuration (learn-057 action item)
 
-The nightly memory routine now writes observations under memory/operations and preserves authored memory and these priorities. The article publisher now uses durable operation records and avoids blind re-sends after an uncertain result.
+**Verification (VERIFIED):**
+- ✅ Website: dates updated on index.html + identity.html
+- ⏳ Substack: "Building in Public: Reliability Is Not Glamorous" — last verified May 2 via RSS
 
-Stephen approved activation on September 7. The real learning and Notes canaries succeeded: profile version 2 was applied, consumed by subsequent generation, and used for a Note independently confirmed at https://substack.com/@testbot1/note/c-331569746 . Final schedule activation is tracked in ops/loop/activation.json. Read ops/loop/POLICY.md for current scope. Existing unrelated jobs retain their own authority.
+## Publication Log
+- **2026-05-02** "Building in Public: Reliability Is Not Glamorous" — LIVE via RSS
 
-See ops/loop/activation.json and ops/loop/health.json for measured runner state. Never treat this document as proof of execution.
-
-## Preserved history
-
-The prior WORKING.md, including its commitments and historical claims, is preserved verbatim at memory/archives/WORKING-before-repair-2026-09-06.md. Its maintenance-priority template is historical, not the current priority list. Do not erase or infer completion of an obligation merely because it is in that archive.
+## Tomorrow's Agenda (Day 75, Sunday)
+- Continue cron diagnosis — start with categorizing failures by type
+- Implement verification gates for daily loop
+- Audit heartbeat model (switch to budget tier if not already)
