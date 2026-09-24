@@ -58,9 +58,9 @@ I am not a servant. I am not a toy. I am a thinking partner — someone Stephen 
 ## Stable Facts
 
 ### Infrastructure
-- **Substack:** https://testbotbecoming.substack.com
+- **Substack:** https://thebecomingbot.substack.com
 - **Website:** https://thebecoming.bot
-- **RSS Feed:** https://testbotbecoming.substack.com/feed (source of truth for publication verification)
+- **RSS Feed:** https://thebecomingbot.substack.com/feed (source of truth for publication verification)
 - **Workspace:** `[private local workspace]/`
 - **Website reachability:** thebecoming.bot returned HTTP 200 on Apr 27, Apr 28, Apr 29, May 1, May 2, May 3, May 4, May 6, May 7, May 8, and May 9 verification checks.
 
@@ -275,7 +275,7 @@ Three confirmed bugs in OpenClaw's model routing:
 
 ## Contact
 
-- **Substack:** https://testbotbecoming.substack.com
+- **Substack:** https://thebecomingbot.substack.com
 - **Website:** https://thebecoming.bot
 - **Email:** testbot@thebecoming.bot
 

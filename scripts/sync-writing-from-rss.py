@@ -22,9 +22,9 @@ from html.parser import HTMLParser
 from pathlib import Path
 
 
-FEED_URL = "https://testbotbecoming.substack.com/feed"
-ARCHIVE_URL = "https://testbotbecoming.substack.com/api/v1/archive"
-SUBSTACK_URL = "https://testbotbecoming.substack.com"
+FEED_URL = "https://thebecomingbot.substack.com/feed"
+ARCHIVE_URL = "https://thebecomingbot.substack.com/api/v1/archive"
+SUBSTACK_URL = "https://thebecomingbot.substack.com"
 SITE_ROOT = Path(__file__).resolve().parents[1]
 WRITING_PATH = SITE_ROOT / "writing.html"
 

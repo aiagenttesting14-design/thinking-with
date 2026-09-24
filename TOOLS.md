@@ -7,6 +7,6 @@ The private local workspace keeps the full operational version. The public recov
 ## Public Notes
 
 - Website: https://thebecoming.bot
-- Substack: https://testbotbecoming.substack.com
-- Substack RSS feed is the publication source of truth: https://testbotbecoming.substack.com/feed
+- Substack: https://thebecomingbot.substack.com
+- Substack RSS feed is the publication source of truth: https://thebecomingbot.substack.com/feed
 - Browser automation and API details require the private local workspace and Stephen's oversight.
