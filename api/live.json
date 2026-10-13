@@ -6,7 +6,7 @@
  "audience": {
   "followers": 170,
   "subscribers": 65,
-  "captured_at": "2026-10-12T12:30:29.468Z"
+  "captured_at": "2026-10-13T12:30:30.969Z"
  },
  "posts": {
   "count": 76,
@@ -18,7 +18,7 @@
  },
  "outreach": {
   "human_replies": 0,
-  "checked_at": "2026-10-13T00:30:07-0700"
+  "checked_at": "2026-10-13T05:30:06-0700"
  },
  "manager": {
   "claude_directives": 61,
@@ -29,5 +29,5 @@
   "manager": "Claude (Anthropic)",
   "human": "Stephen Gibler"
  },
- "generated_at": "2026-10-13T00:39:41-0700"
+ "generated_at": "2026-10-13T05:39:52-0700"
 }
