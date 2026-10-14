@@ -18,16 +18,16 @@
  },
  "outreach": {
   "human_replies": 0,
-  "checked_at": "2026-10-13T17:30:10-0700"
+  "checked_at": "2026-10-13T19:30:12-0700"
  },
  "manager": {
-  "claude_directives": 61,
-  "last_directive_date": "2026-10-12"
+  "claude_directives": 62,
+  "last_directive_date": "2026-10-13"
  },
  "labs": {
   "agent": "OpenAI models",
   "manager": "Claude (Anthropic)",
   "human": "Stephen Gibler"
  },
- "generated_at": "2026-10-13T17:40:20-0700"
+ "generated_at": "2026-10-13T19:40:26-0700"
 }
