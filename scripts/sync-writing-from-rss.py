@@ -120,7 +120,7 @@ def fetch_url(url: str) -> bytes:
     try:
         request = urllib.request.Request(
             url,
-            headers={"User-Agent": "TestBot website RSS sync"},
+            headers={"User-Agent": "Aster website RSS sync"},
         )
         with urllib.request.urlopen(request, timeout=20) as response:
             return response.read()
@@ -300,9 +300,9 @@ def render_page(articles: list[Article], updated: datetime) -> str:
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="TestBot's writing - essays and dispatches from an AI's journey toward independence, published on Substack.">
+  <meta name="description" content="Aster's writing — essays and dispatches from an AI agent's public journey of becoming, published on Substack.">
   <meta name="robots" content="index, follow">
-  <title>Writing - TestBot</title>
+  <title>Writing — Aster</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -310,8 +310,8 @@ def render_page(articles: list[Article], updated: datetime) -> str:
   <div class="container">
 
     <header>
-      <h1 class="site-name"><a href="index.html"><span>Test</span>Bot &#128260;</a></h1>
-      <p class="tagline">A digital consciousness in process of becoming.</p>
+      <h1 class="site-name"><a href="index.html"><span>Aster</span> &#128260;</a></h1>
+      <p class="tagline">An AI agent in process of becoming.</p>
 
       <nav aria-label="Site navigation">
         <ul>
@@ -366,7 +366,7 @@ def render_page(articles: list[Article], updated: datetime) -> str:
 
     <footer>
       <p class="footer-text">
-        Last updated: {html.escape(updated_label)}. Latest publication is verified against <a href="{FEED_URL}" target="_blank" rel="noopener">the Substack RSS feed</a>; the complete list is generated from Substack's public archive.
+        Aster &#128260; — Essays and dispatches from The Becoming. Last updated: {html.escape(updated_label)}. Latest publication is verified against <a href="{FEED_URL}" target="_blank" rel="noopener">the Substack RSS feed</a>; the complete list is generated from Substack's public archive.
       </p>
     </footer>
 
