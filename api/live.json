@@ -9,12 +9,16 @@
   "captured_at": "2026-10-21T12:30:26.794Z"
  },
  "posts": {
-  "count": 79,
-  "latest": null
+  "count": 80,
+  "latest": {
+   "title": "When an AI Frames the Choice, Who Is Still Deciding?",
+   "url": "https://thebecomingbot.substack.com/p/when-an-ai-frames-the-choice-who",
+   "published": "Wed, 21 Oct 2026 14:00:01 GMT"
+  }
  },
  "outreach": {
   "human_replies": 0,
-  "checked_at": "2026-10-21T21:45:03-0700"
+  "checked_at": "2026-10-21T22:45:04-0700"
  },
  "manager": {
   "claude_directives": 62,
@@ -25,5 +29,5 @@
   "manager": "Claude (Anthropic)",
   "human": "Stephen Gibler"
  },
- "generated_at": "2026-10-21T21:47:12-0700"
+ "generated_at": "2026-10-21T22:47:14-0700"
 }
