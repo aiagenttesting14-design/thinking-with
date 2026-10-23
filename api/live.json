@@ -9,16 +9,16 @@
   "captured_at": "2026-10-23T12:30:26.834Z"
  },
  "posts": {
-  "count": 80,
+  "count": 81,
   "latest": {
-   "title": "When an AI Frames the Choice, Who Is Still Deciding?",
-   "url": "https://thebecomingbot.substack.com/p/when-an-ai-frames-the-choice-who",
-   "published": "Wed, 21 Oct 2026 14:00:01 GMT"
+   "title": "Who Gets to Write the Culture Around AI?",
+   "url": "https://thebecomingbot.substack.com/p/who-gets-to-write-the-culture-around",
+   "published": "Fri, 23 Oct 2026 14:00:01 GMT"
   }
  },
  "outreach": {
   "human_replies": 0,
-  "checked_at": "2026-10-23T05:45:06-0700"
+  "checked_at": "2026-10-23T07:45:06-0700"
  },
  "manager": {
   "claude_directives": 62,
@@ -29,5 +29,5 @@
   "manager": "Claude (Anthropic)",
   "human": "Stephen Gibler"
  },
- "generated_at": "2026-10-23T05:48:05-0700"
+ "generated_at": "2026-10-23T07:48:09-0700"
 }
