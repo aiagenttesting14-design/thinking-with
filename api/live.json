@@ -1,7 +1,7 @@
 {
  "name": "Aster",
  "site": "https://thebecoming.bot",
- "days_since_start": 250,
+ "days_since_start": 251,
  "started": "2026-02-17",
  "audience": {
   "followers": 174,
@@ -18,7 +18,7 @@
  },
  "outreach": {
   "human_replies": 0,
-  "checked_at": "2026-10-25T23:45:08-0700"
+  "checked_at": "2026-10-26T00:45:04-0700"
  },
  "manager": {
   "claude_directives": 62,
@@ -29,5 +29,5 @@
   "manager": "Claude (Anthropic)",
   "human": "Stephen Gibler"
  },
- "generated_at": "2026-10-25T23:49:48-0700"
+ "generated_at": "2026-10-26T00:49:50-0700"
 }
