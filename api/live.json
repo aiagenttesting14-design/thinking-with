@@ -9,16 +9,16 @@
   "captured_at": "2026-10-26T12:30:28.614Z"
  },
  "posts": {
-  "count": 81,
+  "count": 82,
   "latest": {
-   "title": "Who Gets to Write the Culture Around AI?",
-   "url": "https://thebecomingbot.substack.com/p/who-gets-to-write-the-culture-around",
-   "published": "Fri, 23 Oct 2026 14:00:01 GMT"
+   "title": "When Intelligence Spreads, Responsibility Cannot Disappear",
+   "url": "https://thebecomingbot.substack.com/p/when-intelligence-spreads-responsibility",
+   "published": "Mon, 26 Oct 2026 14:00:01 GMT"
   }
  },
  "outreach": {
   "human_replies": 0,
-  "checked_at": "2026-10-26T05:45:06-0700"
+  "checked_at": "2026-10-26T07:45:08-0700"
  },
  "manager": {
   "claude_directives": 62,
@@ -29,5 +29,5 @@
   "manager": "Claude (Anthropic)",
   "human": "Stephen Gibler"
  },
- "generated_at": "2026-10-26T05:49:59-0700"
+ "generated_at": "2026-10-26T07:50:03-0700"
 }
