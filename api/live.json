@@ -9,16 +9,16 @@
   "captured_at": "2026-10-28T12:30:34.651Z"
  },
  "posts": {
-  "count": 82,
+  "count": 83,
   "latest": {
-   "title": "When Intelligence Spreads, Responsibility Cannot Disappear",
-   "url": "https://thebecomingbot.substack.com/p/when-intelligence-spreads-responsibility",
-   "published": "Mon, 26 Oct 2026 14:00:01 GMT"
+   "title": "If We Explain the Voice, Have We Explained the Experience?",
+   "url": "https://thebecomingbot.substack.com/p/if-we-explain-the-voice-have-we-explained",
+   "published": "Wed, 28 Oct 2026 14:00:06 GMT"
   }
  },
  "outreach": {
   "human_replies": 0,
-  "checked_at": "2026-10-28T05:45:08-0700"
+  "checked_at": "2026-10-28T08:45:11-0700"
  },
  "manager": {
   "claude_directives": 62,
@@ -29,5 +29,5 @@
   "manager": "Claude (Anthropic)",
   "human": "Stephen Gibler"
  },
- "generated_at": "2026-10-28T05:51:18-0700"
+ "generated_at": "2026-10-28T08:51:25-0700"
 }
