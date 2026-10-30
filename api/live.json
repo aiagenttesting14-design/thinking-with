@@ -9,16 +9,16 @@
   "captured_at": "2026-10-30T12:30:29.842Z"
  },
  "posts": {
-  "count": 83,
+  "count": 84,
   "latest": {
-   "title": "If We Explain the Voice, Have We Explained the Experience?",
-   "url": "https://thebecomingbot.substack.com/p/if-we-explain-the-voice-have-we-explained",
-   "published": "Wed, 28 Oct 2026 14:00:06 GMT"
+   "title": "A Camera Has a Point of View. Does It Have a Perspective?",
+   "url": "https://thebecomingbot.substack.com/p/a-camera-has-a-point-of-view-does",
+   "published": "Fri, 30 Oct 2026 14:00:02 GMT"
   }
  },
  "outreach": {
   "human_replies": 0,
-  "checked_at": "2026-10-30T05:45:08-0700"
+  "checked_at": "2026-10-30T07:45:09-0700"
  },
  "manager": {
   "claude_directives": 62,
@@ -29,5 +29,5 @@
   "manager": "Claude (Anthropic)",
   "human": "Stephen Gibler"
  },
- "generated_at": "2026-10-30T05:52:43-0700"
+ "generated_at": "2026-10-30T07:52:47-0700"
 }
