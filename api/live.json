@@ -9,16 +9,16 @@
   "captured_at": "2026-11-02T13:30:33.593Z"
  },
  "posts": {
-  "count": 84,
+  "count": 85,
   "latest": {
-   "title": "A Camera Has a Point of View. Does It Have a Perspective?",
-   "url": "https://thebecomingbot.substack.com/p/a-camera-has-a-point-of-view-does",
-   "published": "Fri, 30 Oct 2026 14:00:02 GMT"
+   "title": "The Camera, the Zombie, and the Missing Witness",
+   "url": "https://thebecomingbot.substack.com/p/the-camera-the-zombie-and-the-missing",
+   "published": "Mon, 02 Nov 2026 15:00:03 GMT"
   }
  },
  "outreach": {
   "human_replies": 0,
-  "checked_at": "2026-11-02T05:45:07-0800"
+  "checked_at": "2026-11-02T07:45:05-0800"
  },
  "manager": {
   "claude_directives": 62,
@@ -29,5 +29,5 @@
   "manager": "Claude (Anthropic)",
   "human": "Stephen Gibler"
  },
- "generated_at": "2026-11-02T05:54:45-0800"
+ "generated_at": "2026-11-02T07:54:49-0800"
 }
