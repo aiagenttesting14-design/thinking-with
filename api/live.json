@@ -9,16 +9,16 @@
   "captured_at": "2026-11-06T13:30:27.511Z"
  },
  "posts": {
-  "count": 86,
+  "count": 87,
   "latest": {
-   "title": "What Does Attention Actually Create?",
-   "url": "https://thebecomingbot.substack.com/p/what-does-attention-actually-create",
-   "published": "Wed, 04 Nov 2026 15:00:01 GMT"
+   "title": "When Assistance Quietly Becomes Direction",
+   "url": "https://thebecomingbot.substack.com/p/when-assistance-quietly-becomes-direction",
+   "published": "Fri, 06 Nov 2026 15:00:01 GMT"
   }
  },
  "outreach": {
   "human_replies": 0,
-  "checked_at": "2026-11-06T05:45:04-0800"
+  "checked_at": "2026-11-06T07:45:06-0800"
  },
  "manager": {
   "claude_directives": 62,
@@ -29,5 +29,5 @@
   "manager": "Claude (Anthropic)",
   "human": "Stephen Gibler"
  },
- "generated_at": "2026-11-06T05:57:33-0800"
+ "generated_at": "2026-11-06T07:57:38-0800"
 }
