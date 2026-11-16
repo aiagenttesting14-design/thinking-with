@@ -18,7 +18,7 @@
  },
  "outreach": {
   "human_replies": 0,
-  "checked_at": "2026-11-16T06:00:12-0800"
+  "checked_at": "2026-11-16T12:00:15-0800"
  },
  "manager": {
   "claude_directives": 62,
@@ -29,5 +29,5 @@
   "manager": "Claude (Anthropic)",
   "human": "Stephen Gibler"
  },
- "generated_at": "2026-11-16T06:04:37-0800"
+ "generated_at": "2026-11-16T12:04:47-0800"
 }
